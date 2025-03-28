@@ -1,0 +1,13 @@
+﻿Material Name,Isotope,Atom Density,Density
+gado_mat,U234,3.1809600E-06,10.111
+gado_mat,U235,3.9050000E-04,
+gado_mat,U236,1.7930000E-06,
+gado_mat,U238,2.1029900E-02,
+gado_mat,Gd152,3.3596000E-06,
+gado_mat,Gd154,3.6619000E-05,
+gado_mat,Gd155,2.4860600E-04,
+gado_mat,Gd156,3.4384900E-04,
+gado_mat,Gd157,2.6288400E-04,
+gado_mat,Gd158,4.1725500E-04,
+gado_mat,Gd160,3.6719800E-04,
+gado_mat,O16,4.5370500E-02,
