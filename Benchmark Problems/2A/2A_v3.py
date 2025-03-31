@@ -5,7 +5,7 @@
 
 # ## Import modules
 
-# In[48]:
+# In[1]:
 
 
 import sys
@@ -25,7 +25,7 @@ from prettytable import PrettyTable
 
 # ## Add location of OpenMC XS executable, setup ENDF xs path
 
-# In[49]:
+# In[2]:
 
 
 # Add path to OpenMC binary
@@ -43,7 +43,7 @@ if 'ragusa' in your_files:
 
 # # Start model
 
-# In[50]:
+# In[3]:
 
 
 model=openmc.Model()
@@ -52,7 +52,7 @@ model=openmc.Model()
 # ## Define Materials
 # ***
 
-# In[51]:
+# In[4]:
 
 
 uo2 = openmc.Material(name='uo2')
@@ -68,7 +68,7 @@ uo2.set_density('g/cm3', 10.257 )
 uo2.temperature = 565
 
 
-# In[52]:
+# In[5]:
 
 
 zirconium = openmc.Material(name="zirconium")
@@ -108,7 +108,7 @@ zirconium.set_density('g/cm3',  6.56)
 zirconium.temperature = 565
 
 
-# In[53]:
+# In[6]:
 
 
 water = openmc.Material(name="water")
@@ -125,7 +125,7 @@ water.set_density('g/cm3', 0.743)
 water.temperature=565
 
 
-# In[54]:
+# In[7]:
 
 
 helium = openmc.Material(name="helium")
@@ -137,7 +137,7 @@ helium.set_density('g/cm3', 0.178E-03 )
 helium.temperature=565
 
 
-# In[55]:
+# In[8]:
 
 
 model.materials = openmc.Materials([uo2, zirconium, water,helium]) 
@@ -147,7 +147,7 @@ print(model.materials)
 # ## Define individiual cells
 # ***
 
-# In[56]:
+# In[9]:
 
 
 # Global surfaces
@@ -175,7 +175,7 @@ top    = openmc.YPlane( pitch/2, boundary_type='transmission')
 
 # ### Define pincell universe
 
-# In[57]:
+# In[10]:
 
 
 def pincell():
@@ -191,11 +191,11 @@ def pincell():
     #new_fuel = uo2.clone()
     #fuel.fill = new_fuel
 
-    gap = openmc.Cell(name='gap')
+    gap = openmc.Cell(name='fuel gap')
     gap.region = gap_region
     gap.fill = helium     
 
-    clad = openmc.Cell(name='clad')
+    clad = openmc.Cell(name='fuel clad')
     clad.region = clad_region
     clad.fill = zirconium
 
@@ -208,7 +208,7 @@ def pincell():
 
 # ### Create guide tube universe
 
-# In[58]:
+# In[11]:
 
 
 def guide():
@@ -234,7 +234,7 @@ def guide():
 
 # ### Create instrumentation tube universe
 
-# In[59]:
+# In[12]:
 
 
 def instrument():
@@ -260,7 +260,7 @@ def instrument():
 
 # ### Generate universes
 
-# In[60]:
+# In[13]:
 
 
 pc_univ  = pincell()
@@ -271,7 +271,7 @@ it_univ  = instrument()
 # ## Generate assembly
 # ***
 
-# In[61]:
+# In[14]:
 
 
 height = 10 # height in z-dir
@@ -279,7 +279,7 @@ dr = 0.04   # cm of water that is outside assembly
 one_eighth = True # either 1/8 or 1/4 of FA
 
 
-# In[62]:
+# In[15]:
 
 
 def read_csv_to_2d_array(file_path):
@@ -311,7 +311,7 @@ size = lattice_csv.shape[0] #size of the assembly
 
 # ### Define assembly lattice
 
-# In[63]:
+# In[16]:
 
 
 assembly = openmc.RectLattice()
@@ -337,7 +337,7 @@ assembly.universes = lattice_array
 
 # ### Define moderator outside of the assembly
 
-# In[64]:
+# In[17]:
 
 
 # create cell that will contain the lattice
@@ -347,7 +347,7 @@ assembly.outer = openmc.Universe( name='outer', cells = [moderator_outside_cell]
 
 # ### Define 1/8 or 1/4 of full assembly
 
-# In[65]:
+# In[18]:
 
 
 min_x = openmc.XPlane(x0= 0.               , boundary_type='reflective')
@@ -371,7 +371,7 @@ model.geometry.root_universe = openmc.Universe(name = 'root universe', cells=[ro
 
 # ## Plotting
 
-# In[66]:
+# In[19]:
 
 
 color_opt = 'cell' # 'material'
@@ -381,7 +381,7 @@ root_cell.plot(origin=(5,5,0), pixels=(1500,1500), width=(15,15),color_by=color_
 # ##  Settings
 # ***
 
-# In[67]:
+# In[20]:
 
 
 settings = openmc.Settings()
@@ -389,7 +389,7 @@ settings = openmc.Settings()
 
 # ### Source
 
-# In[68]:
+# In[21]:
 
 
 bbox = openmc.BoundingBox(lower_left  = [0., 0., -height/2], 
@@ -401,7 +401,7 @@ settings.source = source
 
 # ### Destination path
 
-# In[69]:
+# In[22]:
 
 
 my_case = '2a'
@@ -414,13 +414,13 @@ path.mkdir(parents = True, exist_ok = True)
 
 # ### Batching
 
-# In[70]:
+# In[23]:
 
 
 test_mode = False
 
 
-# In[71]:
+# In[24]:
 
 
 # add additional parameters
@@ -569,7 +569,7 @@ else:
     txt = 'one_quarter'
 
 
-# In[38]:
+# In[34]:
 
 
 mgxs_lib.load_from_statepoint(sp)
@@ -583,7 +583,7 @@ mgxs_lib.create_mg_library(xsdata_names=xs_names).export_to_hdf5(h5_file_path)
 
 # ## Power Tally Outputs
 
-# In[39]:
+# In[35]:
 
 
 computed_power_tallies = sp.get_tally()
@@ -593,7 +593,7 @@ pin_power_file_path = my_path + f'/pinpow_{my_case}_{txt}_{egroup_name}.npy'
 np.save(pin_power_file_path, power_tally_values)
 
 
-# In[40]:
+# In[36]:
 
 
 for score_id in range(0,len(computed_power_tallies.scores)):
@@ -634,7 +634,7 @@ for score_id in range(0,len(computed_power_tallies.scores)):
     print(table)
 
 
-# In[42]:
+# In[37]:
 
 
 plt.figure()
@@ -647,7 +647,7 @@ plt.show()
 
 # ## Clean up by deleting unwanted files
 
-# In[43]:
+# In[38]:
 
 
 def delete_runtime_files(directory='.'):
@@ -681,7 +681,7 @@ def delete_runtime_files(directory='.'):
 # delete_runtime_files('/path/to/directory')  # specify the directory path if needed
 
 
-# In[44]:
+# In[39]:
 
 
 delete_runtime_files('./')

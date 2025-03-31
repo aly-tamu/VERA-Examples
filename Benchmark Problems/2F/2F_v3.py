@@ -299,23 +299,23 @@ def pyrex_pin():
     steel_region = +Outer_Tube_Inner_Radius & -Outer_Tube_Outer_Radius | +Inner_Tube_Inner_Radius & -Inner_Tube_Outer_Radius
     gap_region = +Inner_Tube_Outer_Radius & -Pyrex_Inner_Radius |  +Pyrex_Outer_Radius & - Outer_Tube_Inner_Radius | -Inner_Tube_Inner_Radius
 
-    steel_cell = openmc.Cell(name='steel_cell')
+    steel_cell = openmc.Cell(name='pyrex_clad')
     steel_cell.fill = SS304
     steel_cell.region = steel_region  
 
-    gap_cell = openmc.Cell(name='gap_cell')
+    gap_cell = openmc.Cell(name='pyrex_gap')
     gap_cell.region = gap_region 
     gap_cell.fill = helium
 
-    pyrex_cell = openmc.Cell(name='pyrex_cell')
+    pyrex_cell = openmc.Cell(name='pyrex')
     pyrex_cell.fill = pyrex_mat
     pyrex_cell.region = pyrex_region  
 
-    water_cell = openmc.Cell(name='water_cell')
+    water_cell = openmc.Cell(name='pyrex_water')
     water_cell.fill = water
     water_cell.region = water_region
 
-    guide_cell = openmc.Cell(name='guide_cell')
+    guide_cell = openmc.Cell(name='pyrex_guide')
     guide_cell.fill = zirconium
     guide_cell.region = guide_region
 
@@ -481,7 +481,7 @@ path.mkdir(parents = True, exist_ok = True)
 # In[25]:
 
 
-test_mode = False
+test_mode = True
 
 
 # In[26]:
@@ -498,8 +498,8 @@ settings.output = {'tallies': True, 'path':my_path}
 settings.temperature['method'] = 'interpolation'
 
 if test_mode == True:
-    settings.batches = 400
-    settings.inactive = 100
+    settings.batches = 200
+    settings.inactive = 50
     settings.particles = 5000
     settings.keff_trigger = {'type':'std_dev','threshold':0.01}
 
@@ -604,7 +604,7 @@ except NameError:
 statepoint_filename = model.run()
 
 
-# In[ ]:
+# In[33]:
 
 
 # Load the last statepoint file
@@ -613,7 +613,7 @@ sp = openmc.StatePoint(statepoint_filename)
 
 # ## MGXS Tally Outputs
 
-# In[ ]:
+# In[34]:
 
 
 xs_names = [] 
@@ -621,10 +621,10 @@ for set in (mgxs_lib.domains):
     print(set.name)
     xs_names.append(set.name)
 
-#print(mgxs_lib.domains)
+print(mgxs_lib.domains)
 
 
-# In[ ]:
+# In[35]:
 
 
 if one_eighth:
@@ -633,7 +633,7 @@ else:
     txt = 'one_quarter'
 
 
-# In[ ]:
+# In[36]:
 
 
 mgxs_lib.load_from_statepoint(sp)
@@ -647,7 +647,7 @@ mgxs_lib.create_mg_library(xsdata_names=xs_names).export_to_hdf5(h5_file_path)
 
 # ## Power Tally Outputs
 
-# In[ ]:
+# In[37]:
 
 
 computed_power_tallies = sp.get_tally()
@@ -657,7 +657,7 @@ pin_power_file_path = my_path + f'/pinpow_{my_case}_{txt}_{egroup_name}.npy'
 np.save(pin_power_file_path, power_tally_values)
 
 
-# In[ ]:
+# In[38]:
 
 
 for score_id in range(0,len(computed_power_tallies.scores)):
@@ -698,7 +698,7 @@ for score_id in range(0,len(computed_power_tallies.scores)):
     print(table)
 
 
-# In[ ]:
+# In[39]:
 
 
 plt.figure()
@@ -711,7 +711,7 @@ plt.show()
 
 # ## Clean up by deleting unwanted files
 
-# In[ ]:
+# In[40]:
 
 
 def delete_runtime_files(directory='.'):
@@ -745,7 +745,7 @@ def delete_runtime_files(directory='.'):
 # delete_runtime_files('/path/to/directory')  # specify the directory path if needed
 
 
-# In[ ]:
+# In[41]:
 
 
 delete_runtime_files('./')

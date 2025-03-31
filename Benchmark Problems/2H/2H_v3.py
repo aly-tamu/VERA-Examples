@@ -293,23 +293,23 @@ def b4c():
     steel_region = +b4c_clad_inner_radius & -b4c_clad_outer_radius
     gap_region = +b4c_radius & - b4c_clad_inner_radius
 
-    steel_cell = openmc.Cell(name='steel_cell')
+    steel_cell = openmc.Cell(name='b4c_clad')
     steel_cell.fill = SS304
     steel_cell.region = steel_region  
 
-    gap_cell = openmc.Cell(name='gap_cell')
+    gap_cell = openmc.Cell(name='b4c_gap')
     gap_cell.region = gap_region 
     gap_cell.fill = helium
 
-    b4c_cell = openmc.Cell(name='b4c_cell')
+    b4c_cell = openmc.Cell(name='b4c')
     b4c_cell.fill = B4C_mat
     b4c_cell.region = b4c_region  
 
-    water_cell = openmc.Cell(name='water_cell')
+    water_cell = openmc.Cell(name='b4c_water')
     water_cell.fill = water
     water_cell.region = water_region
 
-    guide_cell = openmc.Cell(name='guide_cell')
+    guide_cell = openmc.Cell(name='b4c_guide')
     guide_cell.fill = zirconium
     guide_cell.region = guide_region
 

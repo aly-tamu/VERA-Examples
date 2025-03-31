@@ -325,23 +325,23 @@ def pyrex_pin():
     steel_region = +Outer_Tube_Inner_Radius & -Outer_Tube_Outer_Radius | +Inner_Tube_Inner_Radius & -Inner_Tube_Outer_Radius
     gap_region = +Inner_Tube_Outer_Radius & -Pyrex_Inner_Radius |  +Pyrex_Outer_Radius & - Outer_Tube_Inner_Radius | -Inner_Tube_Inner_Radius
 
-    steel_cell = openmc.Cell(name='steel_cell')
+    steel_cell = openmc.Cell(name='pyrex_clad')
     steel_cell.fill = SS304
     steel_cell.region = steel_region  
 
-    gap_cell = openmc.Cell(name='gap_cell')
+    gap_cell = openmc.Cell(name='pyrex_gap')
     gap_cell.region = gap_region 
     gap_cell.fill = helium
 
-    pyrex_cell = openmc.Cell(name='pyrex_cell')
+    pyrex_cell = openmc.Cell(name='pyrex')
     pyrex_cell.fill = pyrex_mat
     pyrex_cell.region = pyrex_region  
 
-    water_cell = openmc.Cell(name='water_cell')
+    water_cell = openmc.Cell(name='pyrex_water')
     water_cell.fill = water
     water_cell.region = water_region
 
-    guide_cell = openmc.Cell(name='guide_cell')
+    guide_cell = openmc.Cell(name='pyrex_guide')
     guide_cell.fill = zirconium
     guide_cell.region = guide_region
 

@@ -302,23 +302,23 @@ def aic():
     steel_region = +aic_clad_inner_radius & -aic_clad_outer_radius
     gap_region = +aic_radius & - aic_clad_inner_radius
 
-    steel_cell = openmc.Cell(name='steel_cell')
+    steel_cell = openmc.Cell(name='aic_clad')
     steel_cell.fill = SS304
     steel_cell.region = steel_region  
 
-    gap_cell = openmc.Cell(name='gap_cell')
+    gap_cell = openmc.Cell(name='aic_gap')
     gap_cell.region = gap_region 
     gap_cell.fill = helium
 
-    aic_cell = openmc.Cell(name='aic_cell')
+    aic_cell = openmc.Cell(name='aic')
     aic_cell.fill = AIC_mat
     aic_cell.region = aic_region  
 
-    water_cell = openmc.Cell(name='water_cell')
+    water_cell = openmc.Cell(name='aic_water')
     water_cell.fill = water
     water_cell.region = water_region
 
-    guide_cell = openmc.Cell(name='guide_cell')
+    guide_cell = openmc.Cell(name='aic_guide')
     guide_cell.fill = zirconium
     guide_cell.region = guide_region
 

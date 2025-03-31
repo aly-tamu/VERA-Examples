@@ -191,11 +191,11 @@ def pincell():
     #new_fuel = uo2.clone()
     #fuel.fill = new_fuel
 
-    gap = openmc.Cell(name='gap')
+    gap = openmc.Cell(name='fuel gap')
     gap.region = gap_region
     gap.fill = helium     
 
-    clad = openmc.Cell(name='clad')
+    clad = openmc.Cell(name='fuel clad')
     clad.region = clad_region
     clad.fill = zirconium
 
