@@ -380,7 +380,7 @@ lattice_array = np.empty((size, size), dtype=openmc.universe.Universe)
 
 for row in range(0,lattice_csv.shape[0]):
     for col in range(0,lattice_csv.shape[1]):
-        elif lattice_csv[row][col] == 'it':
+        if lattice_csv[row][col] == 'it':
             lattice_array[row][col] = it_univ
         elif lattice_csv[row][col] == 'fu':
             lattice_array[row][col] = pc_univ
@@ -695,12 +695,12 @@ for score_id in range(0,len(computed_power_tallies.scores)):
 # In[39]:
 
 
-plt.figure()
-plt.imshow(dd, cmap='viridis')  # You can change the colormap if desired
-plt.title('2D Array Plot')
-plt.colorbar()  # Adds a colorbar to show the scale
-plt.clim([0.7,1.3])
-plt.show()
+#plt.figure()
+#plt.imshow(dd, cmap='viridis')  # You can change the colormap if desired
+#plt.title('2D Array Plot')
+#plt.colorbar()  # Adds a colorbar to show the scale
+#plt.clim([0.7,1.3])
+#plt.show()
 
 
 # ## Clean up by deleting unwanted files

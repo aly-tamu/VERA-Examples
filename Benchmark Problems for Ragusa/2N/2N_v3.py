@@ -756,12 +756,12 @@ for score_id in range(0,len(computed_power_tallies.scores)):
 # In[46]:
 
 
-plt.figure()
-plt.imshow(dd, cmap='viridis')  # You can change the colormap if desired
-plt.title('2D Array Plot')
-plt.colorbar()  # Adds a colorbar to show the scale
-plt.clim([0.6,1.2])
-plt.show()
+#plt.figure()
+#plt.imshow(dd, cmap='viridis')  # You can change the colormap if desired
+#plt.title('2D Array Plot')
+#plt.colorbar()  # Adds a colorbar to show the scale
+#plt.clim([0.6,1.2])
+#plt.show()
 
 
 # ## Clean up by deleting unwanted files
