@@ -395,7 +395,7 @@ lattice_array = np.empty((size, size), dtype=openmc.universe.Universe)
 
 for row in range(0,lattice_csv.shape[0]):
     for col in range(0,lattice_csv.shape[1]):
-        if lattice_csv[row][col] == 'it':
+        if lattice_csv[row][col] == 'itt':
             lattice_array[row][col] = it_univ
         elif lattice_csv[row][col] == 'fu':
             lattice_array[row][col] = pc_univ

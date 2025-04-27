@@ -363,7 +363,7 @@ for row in range(0,lattice_csv.shape[0]):
     for col in range(0,lattice_csv.shape[1]):
         if lattice_csv[row][col] == 'gt': 
             lattice_array[row][col] = gt_univ
-        elif lattice_csv[row][col] == 'it':
+        elif lattice_csv[row][col] == 'itt':
             lattice_array[row][col] = it_univ
         elif lattice_csv[row][col] == 'fu':
             lattice_array[row][col] = pc_univ

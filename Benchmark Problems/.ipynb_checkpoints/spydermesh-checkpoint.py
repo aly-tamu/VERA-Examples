@@ -110,7 +110,8 @@ class spydermesh:
             print("vert\n", vert)
         # stretching in the moderator (past cladding)
         if stretch != []:
-            print("stretching")
+            if verbose:
+                print("stretching")
             if preserve_vol:
                 raise Exception("Cannot use preserve_vol AND stretch at the same time!")
             if stretch < 0 or stretch > 1:
@@ -324,9 +325,10 @@ class spydermesh:
                 # last polygon on that ring
                 ind.append(len(a) - 1)
                 list_ind.append(ind)
-        print("List of indices for polygon vertices")
-        for l in list_ind:
-            print(l)
+        if verbose:
+            print("List of indices for polygon vertices")
+            for l in list_ind:
+                print(l)
         # create polygons
         poly_list = []
         poly_mat = []
@@ -367,7 +369,8 @@ class spydermesh:
                     poly.append(n_vert - 1)
                     # closing polygon
                     poly_list.append(poly + [poly[0]])
-                    print(poly_list)
+                    if verbose:
+                        print(poly_list)
                     poly_mat.append(self.mat_ring[ring_id])
                     # next range of indices = next polygon
                     # not needed as is done above in l.334 ibeg = iend
@@ -436,9 +439,12 @@ class spydermesh:
         ax.set_aspect("equal", adjustable="box")
         plt.draw()
 
-    def plot_polygons(self, new_fig=True, colors=[], size_=5, lw_=0.5):
+    def plot_polygons(self, new_fig=True, colors=[], size_=5, lw_=0.5, plot_size=[]):
         if new_fig:
-            plt.figure()
+            if plot_size:
+                plt.figure(figsize=plot_size)
+            else:
+                plt.figure()
         ax = plt.gca()
         patches = []
 
@@ -469,7 +475,6 @@ class spydermesh:
         p.set_edgecolor("black")
         p.set_linewidth(lw_)
         ax.add_collection(p)
-
         plt.scatter(self.vertices[:, 0], self.vertices[:, 1], marker="s", s=size_)
 
         ax.set_aspect("equal", adjustable="box")
