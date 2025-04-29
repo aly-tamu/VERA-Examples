@@ -2,9 +2,6 @@ import numpy as np
 import h5py
 import math
 
-# Assuming ChiTech-style Python bindings or appropriate placeholders
-
-# --- Mesh Import and Export ---
 my_filename = "lattice_2A.obj"
 meshgen1 = mesh.MeshGenerator.Create({
     "inputs": [
@@ -14,7 +11,6 @@ meshgen1 = mesh.MeshGenerator.Create({
 mesh.MeshGenerator.Execute(meshgen1)
 mesh.ExportToPVTU("mesh_2B")
 
-# --- Material and Cross Section Setup ---
 mat_names = [
     'clad_guide', 'clad_instru', 'clad_pincell', 'fuel_pincell', 'gap_pincell',
     'moderator_guide', 'moderator_instru', 'moderator_pincell',
@@ -31,11 +27,10 @@ for name in mat_names:
     mat.SetProperty(mat_handle, TRANSPORT_XSECTIONS, OPENMC_XSLIB, xs_file, 294, name)
     materials[name] = mat_handle
 
-# --- Angular Quadrature ---
+
 pquad = aquad.CreateProductQuadrature(GAUSS_LEGENDRE_CHEBYSHEV, 32, 4)
 aquad.OptimizeForPolarSymmetry(pquad, 4.0 * math.pi)
 
-# --- Solver Setup ---
 num_groups = 361
 
 lbs_block = {
@@ -85,7 +80,7 @@ if location_id == 0:
 MPIBarrier()
 log.Log(LOG_0, f'Length of the field function list (v2): {len(fflist)}')
 
-# --- Cell Loop ---
+
 pitch = 1.26
 num_cells = 17
 
@@ -137,7 +132,7 @@ for i in range(1, num_cells + 1):
 
         val_table[i - 1][j - 1] = val
 
-# --- Write Output ---
+
 if location_id == 0:
     with open('power_2A.txt', 'w') as f:
         for i in range(num_cells):
