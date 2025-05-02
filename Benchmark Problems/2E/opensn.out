@@ -1,0 +1,268 @@
+OpenSn version 0.0.1
+2025-05-01 13:51:14 Running OpenSn with 32 processes.
+OpenSn number of arguments supplied: 2
+
+[0]  FromFileMeshGenerator: Generating UnpartitionedMesh
+[0]  Making Unpartitioned mesh from wavefront file /home/ugrads/a/agaylard/NUEN 689/2E/lattice_2E.obj
+[0]  Max material id: 15
+[0]  Done checking cell-center-to-face orientations
+[0]  00:00:03.7 Establishing cell connectivity.
+[0]  00:00:03.7 Vertex cell subscriptions complete.
+[0]  00:00:03.7 Surpassing cell 990 of 9900 (10%)
+[0]  00:00:03.7 Surpassing cell 1980 of 9900 (20%)
+[0]  00:00:03.7 Surpassing cell 2971 of 9900 (30%)
+[0]  00:00:03.7 Surpassing cell 3960 of 9900 (40%)
+[0]  00:00:03.7 Surpassing cell 4950 of 9900 (50%)
+[0]  00:00:03.8 Surpassing cell 5941 of 9900 (60%)
+[0]  00:00:03.8 Surpassing cell 6931 of 9900 (70%)
+[0]  00:00:03.8 Surpassing cell 7920 of 9900 (80%)
+[0]  00:00:03.8 Surpassing cell 8910 of 9900 (90%)
+[0]  00:00:03.8 Surpassing cell 9900 of 9900 (100%)
+[0]  00:00:03.8 Establishing cell boundary connectivity.
+[0]  00:00:03.8 Done establishing cell connectivity.
+[0]  Number of cells per partition (max,min,avg) = 324,294,309
+[0]  
+[0]  Mesh statistics:
+[0]    Global cell count             : 9900
+[0]    Local cell count (avg,max,min): 309,324,294
+[0]    Ghost-to-local ratio (avg)    : 0.170777
+[0]  
+[0]  Exporting mesh to VTK files with base mesh_2A
+[0]  Done exporting mesh to VTK.
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 6 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 7 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 9 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 12 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 15 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 16 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 20 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 28 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 30 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 33 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 34 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 37 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 39 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 54 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 56 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 59 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 60 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 63 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 194 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 202 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 208 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 250 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 303 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 341 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 345 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 348 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 11 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 12 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 18 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 20 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 31 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 60 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 65 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 69 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 226 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 319 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 323 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 324 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 344 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 6 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2E/mgxs_casl_2e/mgxs_2e_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  
+[0]  Initializing LBS SteadyStateSolver with name: LBSDiscreteOrdinatesProblem
+[0]  
+[0]  Scattering order    : 3
+[0]  Number of Groups    : 361
+[0]  Number of Group sets: 1
+[0]  
+[0]  ***** Groupset 0 *****
+[0]  Groups:
+[0]      0     1     2     3     4     5     6     7     8     9    10    11 
+[0]     12    13    14    15    16    17    18    19    20    21    22    23 
+[0]     24    25    26    27    28    29    30    31    32    33    34    35 
+[0]     36    37    38    39    40    41    42    43    44    45    46    47 
+[0]     48    49    50    51    52    53    54    55    56    57    58    59 
+[0]     60    61    62    63    64    65    66    67    68    69    70    71 
+[0]     72    73    74    75    76    77    78    79    80    81    82    83 
+[0]     84    85    86    87    88    89    90    91    92    93    94    95 
+[0]     96    97    98    99   100   101   102   103   104   105   106   107 
+[0]    108   109   110   111   112   113   114   115   116   117   118   119 
+[0]    120   121   122   123   124   125   126   127   128   129   130   131 
+[0]    132   133   134   135   136   137   138   139   140   141   142   143 
+[0]    144   145   146   147   148   149   150   151   152   153   154   155 
+[0]    156   157   158   159   160   161   162   163   164   165   166   167 
+[0]    168   169   170   171   172   173   174   175   176   177   178   179 
+[0]    180   181   182   183   184   185   186   187   188   189   190   191 
+[0]    192   193   194   195   196   197   198   199   200   201   202   203 
+[0]    204   205   206   207   208   209   210   211   212   213   214   215 
+[0]    216   217   218   219   220   221   222   223   224   225   226   227 
+[0]    228   229   230   231   232   233   234   235   236   237   238   239 
+[0]    240   241   242   243   244   245   246   247   248   249   250   251 
+[0]    252   253   254   255   256   257   258   259   260   261   262   263 
+[0]    264   265   266   267   268   269   270   271   272   273   274   275 
+[0]    276   277   278   279   280   281   282   283   284   285   286   287 
+[0]    288   289   290   291   292   293   294   295   296   297   298   299 
+[0]    300   301   302   303   304   305   306   307   308   309   310   311 
+[0]    312   313   314   315   316   317   318   319   320   321   322   323 
+[0]    324   325   326   327   328   329   330   331   332   333   334   335 
+[0]    336   337   338   339   340   341   342   343   344   345   346   347 
+[0]    348   349   350   351   352   353   354   355   356   357   358   359 
+[0]    360 
+[0]  
+[0]  Initializing spatial discretization.
+[0]  Computing unit integrals.
+[0]  Ghost cell unit cell-matrix ratio: 17.101%
+[0]  Cell matrices computed.
+[0]  Initializing parallel arrays. G=361 M=10
+[0]  Done with parallel arrays.
+[0]  00:00:10.0 Initializing sweep datastructures.
+[0]  00:00:10.0 Done initializing sweep datastructures.
+[0]  00:00:10.0 Initialized angle aggregation.
+[0]  Initializing WGS and AGS solvers
+[0]  
+[0]  
+[0]  ********** Solving groupset 0 with CLASSIC_RICHARDSON.
+[0]  
+[0]  Quadrature number of angles: 64
+[0]  Groups 0 360
+[0]  
+[0]  00:00:47.6 WGS groups [0-360]: Iteration = 0     Point-wise change = 1.31842        Spectral-radius estimate = 0         
+[0]  00:01:22.9 WGS groups [0-360]: Iteration = 1     Point-wise change = 3.25294        Spectral-radius estimate = 1.57077   
+[0]  00:01:58.2 WGS groups [0-360]: Iteration = 2     Point-wise change = 124.98         Spectral-radius estimate = 6.19844   
+[0]  00:02:33.5 WGS groups [0-360]: Iteration = 3     Point-wise change = 29.8435        Spectral-radius estimate = 0.488657  
+[0]  00:03:08.7 WGS groups [0-360]: Iteration = 4     Point-wise change = 31.2372        Spectral-radius estimate = 1.02308   
+[0]  00:03:44.2 WGS groups [0-360]: Iteration = 5     Point-wise change = 53.966         Spectral-radius estimate = 1.31439   
+[0]  00:04:19.6 WGS groups [0-360]: Iteration = 6     Point-wise change = 38.1102        Spectral-radius estimate = 0.84035   
+[0]  00:04:54.9 WGS groups [0-360]: Iteration = 7     Point-wise change = 77.9955        Spectral-radius estimate = 1.43059   
+[0]  00:05:30.2 WGS groups [0-360]: Iteration = 8     Point-wise change = 38.238         Spectral-radius estimate = 0.700185  
+[0]  00:06:05.5 WGS groups [0-360]: Iteration = 9     Point-wise change = 98.4068        Spectral-radius estimate = 1.60422   
+[0]  00:06:40.7 WGS groups [0-360]: Iteration = 10    Point-wise change = 201.143        Spectral-radius estimate = 1.42968   
+[0]  00:07:15.8 WGS groups [0-360]: Iteration = 11    Point-wise change = 793.274        Spectral-radius estimate = 1.98591   
+[0]  00:07:49.6 WGS groups [0-360]: Iteration = 12    Point-wise change = 380.061        Spectral-radius estimate = 0.692174  
+[0]  00:08:25.1 WGS groups [0-360]: Iteration = 13    Point-wise change = 36.0546        Spectral-radius estimate = 0.308002  
+[0]  00:09:00.3 WGS groups [0-360]: Iteration = 14    Point-wise change = 41.8764        Spectral-radius estimate = 1.07772   
+[0]  00:09:35.5 WGS groups [0-360]: Iteration = 15    Point-wise change = 14.7739        Spectral-radius estimate = 0.593968  
+[0]  00:10:10.1 WGS groups [0-360]: Iteration = 16    Point-wise change = 14.397         Spectral-radius estimate = 0.98716   
+[0]  00:10:45.3 WGS groups [0-360]: Iteration = 17    Point-wise change = 5.32504        Spectral-radius estimate = 0.608172  
+[0]  00:11:21.9 WGS groups [0-360]: Iteration = 18    Point-wise change = 4.52123        Spectral-radius estimate = 0.92144   
+[0]  00:11:57.3 WGS groups [0-360]: Iteration = 19    Point-wise change = 11.265         Spectral-radius estimate = 1.57847   
+[0]  00:12:32.8 WGS groups [0-360]: Iteration = 20    Point-wise change = 17.2031        Spectral-radius estimate = 1.23577   
+[0]  00:13:07.0 WGS groups [0-360]: Iteration = 21    Point-wise change = 46.4985        Spectral-radius estimate = 1.64405   
+[0]  00:13:42.7 WGS groups [0-360]: Iteration = 22    Point-wise change = 106.18         Spectral-radius estimate = 1.51113   
+[0]  00:14:19.6 WGS groups [0-360]: Iteration = 23    Point-wise change = 250.588        Spectral-radius estimate = 1.53624   
+[0]  00:14:53.7 WGS groups [0-360]: Iteration = 24    Point-wise change = 115.331        Spectral-radius estimate = 0.678412  
+[0]  00:15:27.8 WGS groups [0-360]: Iteration = 25    Point-wise change = 621.822        Spectral-radius estimate = 2.32199   
+[0]  00:16:02.0 WGS groups [0-360]: Iteration = 26    Point-wise change = 145.405        Spectral-radius estimate = 0.483567  
+[0]  00:16:37.1 WGS groups [0-360]: Iteration = 27    Point-wise change = 58.9666        Spectral-radius estimate = 0.636816  
+[0]  00:17:11.0 WGS groups [0-360]: Iteration = 28    Point-wise change = 59.1478        Spectral-radius estimate = 1.00153   
+[0]  00:17:44.8 WGS groups [0-360]: Iteration = 29    Point-wise change = 83.2015        Spectral-radius estimate = 1.18603   
+[0]  00:18:18.8 WGS groups [0-360]: Iteration = 30    Point-wise change = 60.6764        Spectral-radius estimate = 0.853973  
+[0]  00:18:52.6 WGS groups [0-360]: Iteration = 31    Point-wise change = 29.5092        Spectral-radius estimate = 0.697379  
+[0]  00:19:26.5 WGS groups [0-360]: Iteration = 32    Point-wise change = 25.7365        Spectral-radius estimate = 0.93389   
+[0]  00:20:00.5 WGS groups [0-360]: Iteration = 33    Point-wise change = 27.8074        Spectral-radius estimate = 1.03946   
+[0]  00:20:37.0 WGS groups [0-360]: Iteration = 34    Point-wise change = 15.5672        Spectral-radius estimate = 0.748212  
+[0]  00:21:11.2 WGS groups [0-360]: Iteration = 35    Point-wise change = 19.5958        Spectral-radius estimate = 1.12196   
+[0]  00:21:45.4 WGS groups [0-360]: Iteration = 36    Point-wise change = 15.9071        Spectral-radius estimate = 0.900979  
+[0]  00:22:19.6 WGS groups [0-360]: Iteration = 37    Point-wise change = 14.3302        Spectral-radius estimate = 0.94914   
+[0]  00:22:53.7 WGS groups [0-360]: Iteration = 38    Point-wise change = 14.6317        Spectral-radius estimate = 1.01047   
+[0]  00:23:28.8 WGS groups [0-360]: Iteration = 39    Point-wise change = 15.0897        Spectral-radius estimate = 1.01553   
+[0]  00:24:03.0 WGS groups [0-360]: Iteration = 40    Point-wise change = 15.7475        Spectral-radius estimate = 1.02157   
+[0]  00:24:36.9 WGS groups [0-360]: Iteration = 41    Point-wise change = 16.6766        Spectral-radius estimate = 1.02907   
+[0]  00:25:10.9 WGS groups [0-360]: Iteration = 42    Point-wise change = 17.9972        Spectral-radius estimate = 1.03884   
+[0]  00:25:44.7 WGS groups [0-360]: Iteration = 43    Point-wise change = 19.9254        Spectral-radius estimate = 1.05221   
+[0]  00:26:18.6 WGS groups [0-360]: Iteration = 44    Point-wise change = 22.8867        Spectral-radius estimate = 1.07174   
+[0]  00:26:52.7 WGS groups [0-360]: Iteration = 45    Point-wise change = 27.8433        Spectral-radius estimate = 1.10298   
+[0]  00:27:26.6 WGS groups [0-360]: Iteration = 46    Point-wise change = 37.5229        Spectral-radius estimate = 1.16088   
+[0]  00:28:00.8 WGS groups [0-360]: Iteration = 47    Point-wise change = 63.8694        Spectral-radius estimate = 1.30466   
+[0]  00:28:34.7 WGS groups [0-360]: Iteration = 48    Point-wise change = 89.1959        Spectral-radius estimate = 1.18175   
+[0]  00:29:08.5 WGS groups [0-360]: Iteration = 49    Point-wise change = 36.8958        Spectral-radius estimate = 0.643156  
+[0]  00:29:42.4 WGS groups [0-360]: Iteration = 50    Point-wise change = 21.8567        Spectral-radius estimate = 0.769668  
+[0]  00:30:16.5 WGS groups [0-360]: Iteration = 51    Point-wise change = 33.1823        Spectral-radius estimate = 1.23214   
+[0]  00:30:50.6 WGS groups [0-360]: Iteration = 52    Point-wise change = 10.7067        Spectral-radius estimate = 0.568034  
+[0]  00:31:24.8 WGS groups [0-360]: Iteration = 53    Point-wise change = 8.08434        Spectral-radius estimate = 0.86895   
+[0]  00:31:59.0 WGS groups [0-360]: Iteration = 54    Point-wise change = 6.27393        Spectral-radius estimate = 0.880943  
+[0]  00:32:33.2 WGS groups [0-360]: Iteration = 55    Point-wise change = 8.6269         Spectral-radius estimate = 1.17262   
+[0]  00:33:07.6 WGS groups [0-360]: Iteration = 56    Point-wise change = 7.45265        Spectral-radius estimate = 0.929454  
+[0]  00:33:44.2 WGS groups [0-360]: Iteration = 57    Point-wise change = 13.4133        Spectral-radius estimate = 1.34157   
+[0]  00:34:20.5 WGS groups [0-360]: Iteration = 58    Point-wise change = 21.1491        Spectral-radius estimate = 1.25568   
+[0]  00:34:54.7 WGS groups [0-360]: Iteration = 59    Point-wise change = 6.787          Spectral-radius estimate = 0.566491  
+[0]  00:35:29.0 WGS groups [0-360]: Iteration = 60    Point-wise change = 8.36393        Spectral-radius estimate = 1.11011   
+[0]  00:36:03.3 WGS groups [0-360]: Iteration = 61    Point-wise change = 6.2189         Spectral-radius estimate = 0.862286  
+[0]  00:36:39.7 WGS groups [0-360]: Iteration = 62    Point-wise change = 7.16652        Spectral-radius estimate = 1.07349   
+[0]  00:37:16.7 WGS groups [0-360]: Iteration = 63    Point-wise change = 8.84882        Spectral-radius estimate = 1.11119   
