@@ -57,8 +57,7 @@ group_sets = [{
             "angle_aggregation_num_subsets": 1,
             "inner_linear_method": "classic_richardson",
             "l_abs_tol": 1.0e-1,
-            "l_max_its": 30,
-            "gmres_restart_interval": 30
+            "l_max_its": 30
             }]
 
 # fix this when automating it stops breaking
@@ -103,7 +102,7 @@ phys.SetOptions(scattering_order=3,#scat_order,
 
 
 k_solver = PowerIterationKEigenSolver(lbs_problem = phys,
-                                      k_tol = 1.0e-1
+                                      k_tol = 1.0e-2
                                      )
 k_solver.Initialize()
 k_solver.Execute()
