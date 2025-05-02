@@ -1,0 +1,704 @@
+OpenSn version 0.0.1
+2025-04-30 16:01:58 Running OpenSn with 25 processes.
+OpenSn number of arguments supplied: 2
+
+[0]  FromFileMeshGenerator: Generating UnpartitionedMesh
+[0]  Making Unpartitioned mesh from wavefront file /home/ugrads/a/agaylard/NUEN 689/2B/lattice_2B.obj
+[0]  Max material id: 10
+[0]  Done checking cell-center-to-face orientations
+[0]  00:00:03.3 Establishing cell connectivity.
+[0]  00:00:03.3 Vertex cell subscriptions complete.
+[0]  00:00:03.3 Surpassing cell 972 of 9720 (10%)
+[0]  00:00:03.3 Surpassing cell 1944 of 9720 (20%)
+[0]  00:00:03.4 Surpassing cell 2917 of 9720 (30%)
+[0]  00:00:03.4 Surpassing cell 3888 of 9720 (40%)
+[0]  00:00:03.4 Surpassing cell 4860 of 9720 (50%)
+[0]  00:00:03.4 Surpassing cell 5833 of 9720 (60%)
+[0]  00:00:03.4 Surpassing cell 6805 of 9720 (70%)
+[0]  00:00:03.4 Surpassing cell 7776 of 9720 (80%)
+[0]  00:00:03.4 Surpassing cell 8748 of 9720 (90%)
+[0]  00:00:03.4 Surpassing cell 9720 of 9720 (100%)
+[0]  00:00:03.4 Establishing cell boundary connectivity.
+[0]  00:00:03.4 Done establishing cell connectivity.
+[0]  Number of cells per partition (max,min,avg) = 408,370,388
+[0]  
+[0]  Mesh statistics:
+[0]    Global cell count             : 9720
+[0]    Local cell count (avg,max,min): 388,408,370
+[0]    Ghost-to-local ratio (avg)    : 0.131951
+[0]  
+[0]  Exporting mesh to VTK files with base mesh_2A
+[0]  Done exporting mesh to VTK.
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 6 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 7 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 8 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 9 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 10 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 14 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 15 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 17 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 20 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 24 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 27 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 31 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 35 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 36 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 42 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 50 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 55 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 62 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 68 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 72 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 76 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 81 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 84 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 109 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 156 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 170 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 203 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 210 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 278 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 300 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 323 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 326 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 333 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 341 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 342 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 344 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 348 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 355 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 1 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 5 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 0 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 2 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 3 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 4 when estimating from the transfer matrices[0m
+[0]  [33m*** WARNING ***  Negative absorption cross section encountered in group 6 when estimating from the transfer matrices[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  Reading OpenMC cross-section file "/home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5"
+[0]  /home/ugrads/a/agaylard/NUEN 689/2B/mgxs_casl_2b/mgxs_2b_one_eighth_SHEM-361.h5 cross-section data evaluated at 294K
+[0]  [33m*** WARNING ***  Estimating absorption from the transfer matrices.[0m
+[0]  
+[0]  Initializing LBS SteadyStateSolver with name: LBSDiscreteOrdinatesProblem
+[0]  
+[0]  Scattering order    : 3
+[0]  Number of Groups    : 361
+[0]  Number of Group sets: 1
+[0]  
+[0]  ***** Groupset 0 *****
+[0]  Groups:
+[0]      0     1     2     3     4     5     6     7     8     9    10    11 
+[0]     12    13    14    15    16    17    18    19    20    21    22    23 
+[0]     24    25    26    27    28    29    30    31    32    33    34    35 
+[0]     36    37    38    39    40    41    42    43    44    45    46    47 
+[0]     48    49    50    51    52    53    54    55    56    57    58    59 
+[0]     60    61    62    63    64    65    66    67    68    69    70    71 
+[0]     72    73    74    75    76    77    78    79    80    81    82    83 
+[0]     84    85    86    87    88    89    90    91    92    93    94    95 
+[0]     96    97    98    99   100   101   102   103   104   105   106   107 
+[0]    108   109   110   111   112   113   114   115   116   117   118   119 
+[0]    120   121   122   123   124   125   126   127   128   129   130   131 
+[0]    132   133   134   135   136   137   138   139   140   141   142   143 
+[0]    144   145   146   147   148   149   150   151   152   153   154   155 
+[0]    156   157   158   159   160   161   162   163   164   165   166   167 
+[0]    168   169   170   171   172   173   174   175   176   177   178   179 
+[0]    180   181   182   183   184   185   186   187   188   189   190   191 
+[0]    192   193   194   195   196   197   198   199   200   201   202   203 
+[0]    204   205   206   207   208   209   210   211   212   213   214   215 
+[0]    216   217   218   219   220   221   222   223   224   225   226   227 
+[0]    228   229   230   231   232   233   234   235   236   237   238   239 
+[0]    240   241   242   243   244   245   246   247   248   249   250   251 
+[0]    252   253   254   255   256   257   258   259   260   261   262   263 
+[0]    264   265   266   267   268   269   270   271   272   273   274   275 
+[0]    276   277   278   279   280   281   282   283   284   285   286   287 
+[0]    288   289   290   291   292   293   294   295   296   297   298   299 
+[0]    300   301   302   303   304   305   306   307   308   309   310   311 
+[0]    312   313   314   315   316   317   318   319   320   321   322   323 
+[0]    324   325   326   327   328   329   330   331   332   333   334   335 
+[0]    336   337   338   339   340   341   342   343   344   345   346   347 
+[0]    348   349   350   351   352   353   354   355   356   357   358   359 
+[0]    360 
+[0]  
+[0]  Initializing spatial discretization.
+[0]  Computing unit integrals.
+[0]  Ghost cell unit cell-matrix ratio: 13.1276%
+[0]  Cell matrices computed.
+[0]  Initializing parallel arrays. G=361 M=10
+[0]  Done with parallel arrays.
+[0]  00:00:09.6 Initializing sweep datastructures.
+[0]  00:00:09.6 Done initializing sweep datastructures.
+[0]  00:00:09.6 Initialized angle aggregation.
+[0]  Initializing WGS and AGS solvers
+[0]  
+[0]  
+[0]  ********** Solving groupset 0 with CLASSIC_RICHARDSON.
+[0]  
+[0]  Quadrature number of angles: 64
+[0]  Groups 0 360
+[0]  
+[0]  00:00:44.7 WGS groups [0-360]: Iteration = 0     Point-wise change = 0.999714       Spectral-radius estimate = 0         
+[0]  00:01:18.7 WGS groups [0-360]: Iteration = 1     Point-wise change = 1.14003        Spectral-radius estimate = 1.06788   
+[0]  00:01:52.7 WGS groups [0-360]: Iteration = 2     Point-wise change = 79.6124        Spectral-radius estimate = 8.35665   
+[0]  00:02:26.6 WGS groups [0-360]: Iteration = 3     Point-wise change = 6.30858        Spectral-radius estimate = 0.281498  
+[0]  00:03:00.6 WGS groups [0-360]: Iteration = 4     Point-wise change = 151.114        Spectral-radius estimate = 4.89425   
+[0]  00:03:34.6 WGS groups [0-360]: Iteration = 5     Point-wise change = 15.3824        Spectral-radius estimate = 0.319051  
+[0]  00:04:08.6 WGS groups [0-360]: Iteration = 6     Point-wise change = 27.5446        Spectral-radius estimate = 1.33816   
+[0]  00:04:42.6 WGS groups [0-360]: Iteration = 7     Point-wise change = 55.3344        Spectral-radius estimate = 1.41736   
+[0]  00:05:16.6 WGS groups [0-360]: Iteration = 8     Point-wise change = 141.851        Spectral-radius estimate = 1.6011    
+[0]  00:05:50.6 WGS groups [0-360]: Iteration = 9     Point-wise change = 439.101        Spectral-radius estimate = 1.75941   
+[0]  00:06:24.7 WGS groups [0-360]: Iteration = 10    Point-wise change = 316.059        Spectral-radius estimate = 0.848403  
+[0]  00:06:58.7 WGS groups [0-360]: Iteration = 11    Point-wise change = 125.073        Spectral-radius estimate = 0.629068  
+[0]  00:07:32.8 WGS groups [0-360]: Iteration = 12    Point-wise change = 62.6831        Spectral-radius estimate = 0.707935  
+[0]  00:08:06.7 WGS groups [0-360]: Iteration = 13    Point-wise change = 15.9227        Spectral-radius estimate = 0.504004  
+[0]  00:08:41.8 WGS groups [0-360]: Iteration = 14    Point-wise change = 12.6594        Spectral-radius estimate = 0.891658  
+[0]  00:09:15.8 WGS groups [0-360]: Iteration = 15    Point-wise change = 8.32565        Spectral-radius estimate = 0.810965  
+[0]  00:09:50.0 WGS groups [0-360]: Iteration = 16    Point-wise change = 11.1521        Spectral-radius estimate = 1.15736   
+[0]  00:10:24.0 WGS groups [0-360]: Iteration = 17    Point-wise change = 4.28812        Spectral-radius estimate = 0.62009   
+[0]  00:10:58.1 WGS groups [0-360]: Iteration = 18    Point-wise change = 12.3499        Spectral-radius estimate = 1.69706   
+[0]  00:11:32.1 WGS groups [0-360]: Iteration = 19    Point-wise change = 11.5964        Spectral-radius estimate = 0.969016  
+[0]  00:12:06.2 WGS groups [0-360]: Iteration = 20    Point-wise change = 32.442         Spectral-radius estimate = 1.6726    
+[0]  00:12:40.2 WGS groups [0-360]: Iteration = 21    Point-wise change = 46.9034        Spectral-radius estimate = 1.2024    
+[0]  00:13:14.3 WGS groups [0-360]: Iteration = 22    Point-wise change = 52.1198        Spectral-radius estimate = 1.05414   
+[0]  00:13:48.3 WGS groups [0-360]: Iteration = 23    Point-wise change = 131.85         Spectral-radius estimate = 1.59052   
+[0]  00:14:22.4 WGS groups [0-360]: Iteration = 24    Point-wise change = 1055.04        Spectral-radius estimate = 2.82875   
+[0]  00:14:56.4 WGS groups [0-360]: Iteration = 25    Point-wise change = 331.271        Spectral-radius estimate = 0.560347  
+[0]  00:15:30.4 WGS groups [0-360]: Iteration = 26    Point-wise change = 40.3679        Spectral-radius estimate = 0.349081  
+[0]  00:16:04.5 WGS groups [0-360]: Iteration = 27    Point-wise change = 23.4382        Spectral-radius estimate = 0.761981  
+[0]  00:16:38.5 WGS groups [0-360]: Iteration = 28    Point-wise change = 18.322         Spectral-radius estimate = 0.884146  
+[0]  00:17:12.5 WGS groups [0-360]: Iteration = 29    Point-wise change = 17.9799        Spectral-radius estimate = 0.990622  
+[0]  00:17:46.6 WGS groups [0-360]: Iteration = 30    Point-wise change = 14.2603        Spectral-radius estimate = 0.890575  
+[0]  00:18:20.6 WGS groups [0-360]: Iteration = 31    Point-wise change = 9.41447        Spectral-radius estimate = 0.812519  
+[0]  00:18:54.5 WGS groups [0-360]: Iteration = 32    Point-wise change = 9.26133        Spectral-radius estimate = 0.991834  
+[0]  00:19:28.5 WGS groups [0-360]: Iteration = 33    Point-wise change = 10.7953        Spectral-radius estimate = 1.07964   
+[0]  00:20:02.4 WGS groups [0-360]: Iteration = 34    Point-wise change = 9.30029        Spectral-radius estimate = 0.928179  
+[0]  00:20:36.3 WGS groups [0-360]: Iteration = 35    Point-wise change = 15.5495        Spectral-radius estimate = 1.29303   
+[0]  00:21:10.3 WGS groups [0-360]: Iteration = 36    Point-wise change = 10.6067        Spectral-radius estimate = 0.825907  
+[0]  00:21:44.2 WGS groups [0-360]: Iteration = 37    Point-wise change = 11.4826        Spectral-radius estimate = 1.04047   
+[0]  00:22:18.1 WGS groups [0-360]: Iteration = 38    Point-wise change = 7.62317        Spectral-radius estimate = 0.814795  
+[0]  00:22:52.3 WGS groups [0-360]: Iteration = 39    Point-wise change = 6.89135        Spectral-radius estimate = 0.95079   
+[0]  00:23:27.8 WGS groups [0-360]: Iteration = 40    Point-wise change = 8.64965        Spectral-radius estimate = 1.12033   
+[0]  00:24:03.1 WGS groups [0-360]: Iteration = 41    Point-wise change = 6.01232        Spectral-radius estimate = 0.833723  
+[0]  00:24:38.0 WGS groups [0-360]: Iteration = 42    Point-wise change = 6.90376        Spectral-radius estimate = 1.07157   
+[0]  00:25:12.3 WGS groups [0-360]: Iteration = 43    Point-wise change = 8.63445        Spectral-radius estimate = 1.11834   
+[0]  00:25:46.1 WGS groups [0-360]: Iteration = 44    Point-wise change = 5.40518        Spectral-radius estimate = 0.791202  
+[0]  00:26:19.9 WGS groups [0-360]: Iteration = 45    Point-wise change = 7.76184        Spectral-radius estimate = 1.19833   
+[0]  00:26:53.7 WGS groups [0-360]: Iteration = 46    Point-wise change = 5.65976        Spectral-radius estimate = 0.853919  
+[0]  00:27:27.5 WGS groups [0-360]: Iteration = 47    Point-wise change = 3.60974        Spectral-radius estimate = 0.798618  
+[0]  00:28:01.2 WGS groups [0-360]: Iteration = 48    Point-wise change = 3.80598        Spectral-radius estimate = 1.02682   
+[0]  00:28:35.0 WGS groups [0-360]: Iteration = 49    Point-wise change = 4.48467        Spectral-radius estimate = 1.08551   
+[0]  00:29:08.7 WGS groups [0-360]: Iteration = 50    Point-wise change = 4.71585        Spectral-radius estimate = 1.02545   
+[0]  00:29:42.4 WGS groups [0-360]: Iteration = 51    Point-wise change = 3.81634        Spectral-radius estimate = 0.899587  
+[0]  00:30:16.2 WGS groups [0-360]: Iteration = 52    Point-wise change = 1.9113         Spectral-radius estimate = 0.707687  
+[0]  00:30:50.0 WGS groups [0-360]: Iteration = 53    Point-wise change = 3.27427        Spectral-radius estimate = 1.30886   
+[0]  00:31:23.8 WGS groups [0-360]: Iteration = 54    Point-wise change = 4.69478        Spectral-radius estimate = 1.19743   
+[0]  00:31:57.6 WGS groups [0-360]: Iteration = 55    Point-wise change = 6.55683        Spectral-radius estimate = 1.18179   
+[0]  00:32:31.4 WGS groups [0-360]: Iteration = 56    Point-wise change = 2.2764         Spectral-radius estimate = 0.58922   
+[0]  00:33:05.2 WGS groups [0-360]: Iteration = 57    Point-wise change = 2.88879        Spectral-radius estimate = 1.12651   
+[0]  00:33:39.0 WGS groups [0-360]: Iteration = 58    Point-wise change = 4.53719        Spectral-radius estimate = 1.25324   
+[0]  00:34:12.8 WGS groups [0-360]: Iteration = 59    Point-wise change = 3.64204        Spectral-radius estimate = 0.89594   
+[0]  00:34:46.5 WGS groups [0-360]: Iteration = 60    Point-wise change = 7.41586        Spectral-radius estimate = 1.42695   
+[0]  00:35:20.3 WGS groups [0-360]: Iteration = 61    Point-wise change = 3.14853        Spectral-radius estimate = 0.651589  
+[0]  00:35:54.0 WGS groups [0-360]: Iteration = 62    Point-wise change = 2.44224        Spectral-radius estimate = 0.880725  
+[0]  00:36:27.8 WGS groups [0-360]: Iteration = 63    Point-wise change = 2.81717        Spectral-radius estimate = 1.07402   
+[0]  00:37:01.6 WGS groups [0-360]: Iteration = 64    Point-wise change = 3.9481         Spectral-radius estimate = 1.18382   
+[0]  00:37:35.4 WGS groups [0-360]: Iteration = 65    Point-wise change = 3.72509        Spectral-radius estimate = 0.971347  
+[0]  00:38:09.2 WGS groups [0-360]: Iteration = 66    Point-wise change = 1.948          Spectral-radius estimate = 0.723147  
+[0]  00:38:43.0 WGS groups [0-360]: Iteration = 67    Point-wise change = 3.29025        Spectral-radius estimate = 1.29963   
+[0]  00:39:16.8 WGS groups [0-360]: Iteration = 68    Point-wise change = 1.87745        Spectral-radius estimate = 0.755388  
+[0]  00:39:50.6 WGS groups [0-360]: Iteration = 69    Point-wise change = 0.943938       Spectral-radius estimate = 0.709067  
+[0]  00:40:24.5 WGS groups [0-360]: Iteration = 70    Point-wise change = 0.5867         Spectral-radius estimate = 0.788381  
+[0]  00:40:58.4 WGS groups [0-360]: Iteration = 71    Point-wise change = 0.655464       Spectral-radius estimate = 1.05698   
+[0]  00:41:32.2 WGS groups [0-360]: Iteration = 72    Point-wise change = 0.929137       Spectral-radius estimate = 1.1906    
+[0]  00:42:06.0 WGS groups [0-360]: Iteration = 73    Point-wise change = 1.92202        Spectral-radius estimate = 1.43826   
+[0]  00:42:39.8 WGS groups [0-360]: Iteration = 74    Point-wise change = 1.48453        Spectral-radius estimate = 0.878852  
+[0]  00:43:13.7 WGS groups [0-360]: Iteration = 75    Point-wise change = 3.40083        Spectral-radius estimate = 1.51356   
+[0]  00:43:47.5 WGS groups [0-360]: Iteration = 76    Point-wise change = 2.21468        Spectral-radius estimate = 0.806981  
+[0]  00:44:21.3 WGS groups [0-360]: Iteration = 77    Point-wise change = 1.52352        Spectral-radius estimate = 0.829408  
+[0]  00:44:55.1 WGS groups [0-360]: Iteration = 78    Point-wise change = 0.652471       Spectral-radius estimate = 0.65442   
+[0]  00:45:29.0 WGS groups [0-360]: Iteration = 79    Point-wise change = 0.382219       Spectral-radius estimate = 0.765377  
+[0]  00:46:02.9 WGS groups [0-360]: Iteration = 80    Point-wise change = 0.252713       Spectral-radius estimate = 0.813125  
+[0]  00:46:36.7 WGS groups [0-360]: Iteration = 81    Point-wise change = 0.178043       Spectral-radius estimate = 0.83936   
+[0]  00:47:10.5 WGS groups [0-360]: Iteration = 82    Point-wise change = 0.13035        Spectral-radius estimate = 0.855644  
+[0]  00:47:44.4 WGS groups [0-360]: Iteration = 83    Point-wise change = 0.0986996      Spectral-radius estimate = 0.870167  
+[0]  00:48:18.2 WGS groups [0-360]: Iteration = 84    Point-wise change = 0.0762925      Spectral-radius estimate = 0.879191  
+[0]  00:48:52.1 WGS groups [0-360]: Iteration = 85    Point-wise change = 0.0595343      Spectral-radius estimate = 0.88337   
+[0]  00:49:26.0 WGS groups [0-360]: Iteration = 86    Point-wise change = 0.0467876      Spectral-radius estimate = 0.886506  
+[0]  00:49:60.0 WGS groups [0-360]: Iteration = 87    Point-wise change = 0.0369678      Spectral-radius estimate = 0.888887  
+[0]  00:50:33.8 WGS groups [0-360]: Iteration = 88    Point-wise change = 0.029329       Spectral-radius estimate = 0.890711  
+[0]  00:51:07.7 WGS groups [0-360]: Iteration = 89    Point-wise change = 0.0233421      Spectral-radius estimate = 0.892116  
+[0]  00:51:41.6 WGS groups [0-360]: Iteration = 90    Point-wise change = 0.0186225      Spectral-radius estimate = 0.893202  
+[0]  00:52:15.4 WGS groups [0-360]: Iteration = 91    Point-wise change = 0.0148853      Spectral-radius estimate = 0.894044  
+[0]  00:52:49.3 WGS groups [0-360]: Iteration = 92    Point-wise change = 0.0119154      Spectral-radius estimate = 0.894696  
+[0]  00:53:23.1 WGS groups [0-360]: Iteration = 93    Point-wise change = 0.00954881     Spectral-radius estimate = 0.895202  
+[0]  00:53:56.9 WGS groups [0-360]: Iteration = 94    Point-wise change = 0.00765895     Spectral-radius estimate = 0.895592  
+[0]  00:54:30.7 WGS groups [0-360]: Iteration = 95    Point-wise change = 0.00614724     Spectral-radius estimate = 0.895891  
+[0]  00:55:04.6 WGS groups [0-360]: Iteration = 96    Point-wise change = 0.00493642     Spectral-radius estimate = 0.89612   
+[0]  00:55:38.4 WGS groups [0-360]: Iteration = 97    Point-wise change = 0.00396562     Spectral-radius estimate = 0.896292  
+[0]  00:56:12.2 WGS groups [0-360]: Iteration = 98    Point-wise change = 0.00318664     Spectral-radius estimate = 0.896419  
+[0]  00:56:46.0 WGS groups [0-360]: Iteration = 99    Point-wise change = 0.00256121     Spectral-radius estimate = 0.896511  
+[0]  00:57:20.6 WGS groups [0-360]: Iteration = 100   Point-wise change = 0.00205881     Spectral-radius estimate = 0.896574  
+[0]  00:57:56.6 WGS groups [0-360]: Iteration = 101   Point-wise change = 0.00165511     Spectral-radius estimate = 0.896614  
+[0]  00:58:31.6 WGS groups [0-360]: Iteration = 102   Point-wise change = 0.00133063     Spectral-radius estimate = 0.896633  
+[0]  00:59:05.5 WGS groups [0-360]: Iteration = 103   Point-wise change = 0.00106976     Spectral-radius estimate = 0.896635  
+[0]  00:59:39.1 WGS groups [0-360]: Iteration = 104   Point-wise change = 0.000860014    Spectral-radius estimate = 0.896621   CONVERGED
+[0]  
+[0]         Average sweep time (s):        24.453
+[0]         Sweep Time/Unknown (ns):       676.201
+[0]         Number of unknowns per sweep:  904059520
+[0]  
+[0]  00:59:39.2 AGS Iteration 0     Error Norm 13213.9       
+[0]  00:59:39.6   Iteration     1  k_eff    1808.624  k_eff change    0.9994471  reactivity   99944.71
+[0]  
+[0]  
+[0]  ********** Solving groupset 0 with CLASSIC_RICHARDSON.
+[0]  
+[0]  Quadrature number of angles: 64
+[0]  Groups 0 360
+[0]  
+[0]  01:00:14.3 WGS groups [0-360]: Iteration = 0     Point-wise change = 0.514258       Spectral-radius estimate = 0         
+[0]  01:00:48.1 WGS groups [0-360]: Iteration = 1     Point-wise change = 0.425348       Spectral-radius estimate = 0.909456  
+[0]  01:01:21.9 WGS groups [0-360]: Iteration = 2     Point-wise change = 0.424932       Spectral-radius estimate = 0.99951   
+[0]  01:01:55.8 WGS groups [0-360]: Iteration = 3     Point-wise change = 1.79397        Spectral-radius estimate = 2.0547    
+[0]  01:02:29.7 WGS groups [0-360]: Iteration = 4     Point-wise change = 1.38936        Spectral-radius estimate = 0.880034  
+[0]  01:03:03.5 WGS groups [0-360]: Iteration = 5     Point-wise change = 1.52826        Spectral-radius estimate = 1.0488    
+[0]  01:03:37.9 WGS groups [0-360]: Iteration = 6     Point-wise change = 1.80256        Spectral-radius estimate = 1.08604   
+[0]  01:04:12.3 WGS groups [0-360]: Iteration = 7     Point-wise change = 2.45008        Spectral-radius estimate = 1.16586   
+[0]  01:04:46.7 WGS groups [0-360]: Iteration = 8     Point-wise change = 3.07885        Spectral-radius estimate = 1.121     
+[0]  01:05:21.0 WGS groups [0-360]: Iteration = 9     Point-wise change = 3.59627        Spectral-radius estimate = 1.08077   
+[0]  01:05:55.5 WGS groups [0-360]: Iteration = 10    Point-wise change = 4.66628        Spectral-radius estimate = 1.13909   
+[0]  01:06:29.9 WGS groups [0-360]: Iteration = 11    Point-wise change = 7.66017        Spectral-radius estimate = 1.28125   
+[0]  01:07:04.2 WGS groups [0-360]: Iteration = 12    Point-wise change = 6.20631        Spectral-radius estimate = 0.900114  
+[0]  01:07:38.6 WGS groups [0-360]: Iteration = 13    Point-wise change = 15.612         Spectral-radius estimate = 1.58603   
+[0]  01:08:12.9 WGS groups [0-360]: Iteration = 14    Point-wise change = 7.99168        Spectral-radius estimate = 0.715468  
+[0]  01:08:47.4 WGS groups [0-360]: Iteration = 15    Point-wise change = 9.92057        Spectral-radius estimate = 1.11416   
+[0]  01:09:21.8 WGS groups [0-360]: Iteration = 16    Point-wise change = 9.86996        Spectral-radius estimate = 0.997446  
+[0]  01:09:56.2 WGS groups [0-360]: Iteration = 17    Point-wise change = 24.5084        Spectral-radius estimate = 1.5758    
+[0]  01:10:30.6 WGS groups [0-360]: Iteration = 18    Point-wise change = 24.1493        Spectral-radius estimate = 0.992647  
+[0]  01:11:05.0 WGS groups [0-360]: Iteration = 19    Point-wise change = 36.4633        Spectral-radius estimate = 1.22878   
+[0]  01:11:39.4 WGS groups [0-360]: Iteration = 20    Point-wise change = 104.2          Spectral-radius estimate = 1.69046   
+[0]  01:12:13.5 WGS groups [0-360]: Iteration = 21    Point-wise change = 104.249        Spectral-radius estimate = 1.00024   
+[0]  01:12:47.2 WGS groups [0-360]: Iteration = 22    Point-wise change = 272.761        Spectral-radius estimate = 1.61754   
+[0]  01:13:21.0 WGS groups [0-360]: Iteration = 23    Point-wise change = 187.643        Spectral-radius estimate = 0.829422  
+[0]  01:13:54.7 WGS groups [0-360]: Iteration = 24    Point-wise change = 101.471        Spectral-radius estimate = 0.735367  
+[0]  01:14:28.4 WGS groups [0-360]: Iteration = 25    Point-wise change = 53.8135        Spectral-radius estimate = 0.72824   
+[0]  01:15:02.9 WGS groups [0-360]: Iteration = 26    Point-wise change = 50.3762        Spectral-radius estimate = 0.967537  
+[0]  01:15:36.6 WGS groups [0-360]: Iteration = 27    Point-wise change = 46.3299        Spectral-radius estimate = 0.958998  
+[0]  01:16:10.7 WGS groups [0-360]: Iteration = 28    Point-wise change = 266.528        Spectral-radius estimate = 2.3985    
+[0]  01:16:45.0 WGS groups [0-360]: Iteration = 29    Point-wise change = 30.2319        Spectral-radius estimate = 0.336792  
+[0]  01:17:19.5 WGS groups [0-360]: Iteration = 30    Point-wise change = 66.5377        Spectral-radius estimate = 1.48355   
+[0]  01:17:54.1 WGS groups [0-360]: Iteration = 31    Point-wise change = 35.0984        Spectral-radius estimate = 0.72629   
+[0]  01:18:28.6 WGS groups [0-360]: Iteration = 32    Point-wise change = 48.4571        Spectral-radius estimate = 1.17499   
+[0]  01:19:03.2 WGS groups [0-360]: Iteration = 33    Point-wise change = 49.1955        Spectral-radius estimate = 1.00759   
+[0]  01:19:37.8 WGS groups [0-360]: Iteration = 34    Point-wise change = 74.5999        Spectral-radius estimate = 1.23142   
+[0]  01:20:12.5 WGS groups [0-360]: Iteration = 35    Point-wise change = 46.5873        Spectral-radius estimate = 0.79025   
+[0]  01:20:47.0 WGS groups [0-360]: Iteration = 36    Point-wise change = 50.8174        Spectral-radius estimate = 1.04441   
+[0]  01:21:21.7 WGS groups [0-360]: Iteration = 37    Point-wise change = 101.59         Spectral-radius estimate = 1.4139    
+[0]  01:21:56.3 WGS groups [0-360]: Iteration = 38    Point-wise change = 79.4387        Spectral-radius estimate = 0.884283  
+[0]  01:22:30.9 WGS groups [0-360]: Iteration = 39    Point-wise change = 69.466         Spectral-radius estimate = 0.935126  
+[0]  01:23:05.5 WGS groups [0-360]: Iteration = 40    Point-wise change = 78.5102        Spectral-radius estimate = 1.06311   
+[0]  01:23:40.2 WGS groups [0-360]: Iteration = 41    Point-wise change = 79.1775        Spectral-radius estimate = 1.00424   
+[0]  01:24:14.9 WGS groups [0-360]: Iteration = 42    Point-wise change = 83.3545        Spectral-radius estimate = 1.02604   
+[0]  01:24:49.6 WGS groups [0-360]: Iteration = 43    Point-wise change = 66.8034        Spectral-radius estimate = 0.89523   
+[0]  01:25:24.3 WGS groups [0-360]: Iteration = 44    Point-wise change = 100.382        Spectral-radius estimate = 1.22582   
+[0]  01:25:58.9 WGS groups [0-360]: Iteration = 45    Point-wise change = 87.3217        Spectral-radius estimate = 0.932682  
+[0]  01:26:33.6 WGS groups [0-360]: Iteration = 46    Point-wise change = 92.2758        Spectral-radius estimate = 1.02798   
+[0]  01:27:08.2 WGS groups [0-360]: Iteration = 47    Point-wise change = 146.057        Spectral-radius estimate = 1.25811   
+[0]  01:27:42.9 WGS groups [0-360]: Iteration = 48    Point-wise change = 297.203        Spectral-radius estimate = 1.42648   
+[0]  01:28:17.5 WGS groups [0-360]: Iteration = 49    Point-wise change = 802.854        Spectral-radius estimate = 1.64358   
+[0]  01:28:52.1 WGS groups [0-360]: Iteration = 50    Point-wise change = 423.145        Spectral-radius estimate = 0.725982  
+[0]  01:29:26.8 WGS groups [0-360]: Iteration = 51    Point-wise change = 355.111        Spectral-radius estimate = 0.916089  
+[0]  01:30:02.1 WGS groups [0-360]: Iteration = 52    Point-wise change = 393.862        Spectral-radius estimate = 1.05315   
+[0]  01:30:38.9 WGS groups [0-360]: Iteration = 53    Point-wise change = 583.065        Spectral-radius estimate = 1.21671   
+[0]  01:31:14.9 WGS groups [0-360]: Iteration = 54    Point-wise change = 643.532        Spectral-radius estimate = 1.05057   
+[0]  01:31:51.6 WGS groups [0-360]: Iteration = 55    Point-wise change = 2044.97        Spectral-radius estimate = 1.78262   
+[0]  01:32:26.0 WGS groups [0-360]: Iteration = 56    Point-wise change = 1750.78        Spectral-radius estimate = 0.925277  
+[0]  01:33:00.7 WGS groups [0-360]: Iteration = 57    Point-wise change = 390.432        Spectral-radius estimate = 0.472234  
+[0]  01:33:35.5 WGS groups [0-360]: Iteration = 58    Point-wise change = 205.836        Spectral-radius estimate = 0.726086  
+[0]  01:34:10.1 WGS groups [0-360]: Iteration = 59    Point-wise change = 145.457        Spectral-radius estimate = 0.840634  
+[0]  01:34:44.8 WGS groups [0-360]: Iteration = 60    Point-wise change = 115.201        Spectral-radius estimate = 0.889941  
+[0]  01:35:19.5 WGS groups [0-360]: Iteration = 61    Point-wise change = 69.681         Spectral-radius estimate = 0.777729  
+[0]  01:35:54.1 WGS groups [0-360]: Iteration = 62    Point-wise change = 68.1253        Spectral-radius estimate = 0.988774  
+[0]  01:36:28.7 WGS groups [0-360]: Iteration = 63    Point-wise change = 62.0849        Spectral-radius estimate = 0.954638  
+[0]  01:37:03.3 WGS groups [0-360]: Iteration = 64    Point-wise change = 47.544         Spectral-radius estimate = 0.875094  
+[0]  01:37:37.8 WGS groups [0-360]: Iteration = 65    Point-wise change = 58.4079        Spectral-radius estimate = 1.10838   
+[0]  01:38:12.4 WGS groups [0-360]: Iteration = 66    Point-wise change = 31.5203        Spectral-radius estimate = 0.734614  
+[0]  01:38:47.5 WGS groups [0-360]: Iteration = 67    Point-wise change = 27.7205        Spectral-radius estimate = 0.93779   
+[0]  01:39:23.0 WGS groups [0-360]: Iteration = 68    Point-wise change = 28.4116        Spectral-radius estimate = 1.01239   
+[0]  01:39:58.8 WGS groups [0-360]: Iteration = 69    Point-wise change = 23.6242        Spectral-radius estimate = 0.911866  
+[0]  01:40:34.7 WGS groups [0-360]: Iteration = 70    Point-wise change = 19.146         Spectral-radius estimate = 0.900244  
+[0]  01:41:10.4 WGS groups [0-360]: Iteration = 71    Point-wise change = 18.1874        Spectral-radius estimate = 0.974644  
+[0]  01:41:46.1 WGS groups [0-360]: Iteration = 72    Point-wise change = 25.7243        Spectral-radius estimate = 1.18929   
+[0]  01:42:22.0 WGS groups [0-360]: Iteration = 73    Point-wise change = 15.2347        Spectral-radius estimate = 0.769564  
+[0]  01:42:57.8 WGS groups [0-360]: Iteration = 74    Point-wise change = 12.4954        Spectral-radius estimate = 0.905646  
+[0]  01:43:33.6 WGS groups [0-360]: Iteration = 75    Point-wise change = 8.01936        Spectral-radius estimate = 0.801115  
+[0]  01:44:09.4 WGS groups [0-360]: Iteration = 76    Point-wise change = 9.00396        Spectral-radius estimate = 1.05961   
+[0]  01:44:45.1 WGS groups [0-360]: Iteration = 77    Point-wise change = 21.5594        Spectral-radius estimate = 1.5474    
+[0]  01:45:20.9 WGS groups [0-360]: Iteration = 78    Point-wise change = 9.43105        Spectral-radius estimate = 0.661395  
+[0]  01:45:56.7 WGS groups [0-360]: Iteration = 79    Point-wise change = 8.34499        Spectral-radius estimate = 0.940661  
+[0]  01:46:32.4 WGS groups [0-360]: Iteration = 80    Point-wise change = 11.5955        Spectral-radius estimate = 1.17878   
+[0]  01:47:08.1 WGS groups [0-360]: Iteration = 81    Point-wise change = 22.0269        Spectral-radius estimate = 1.37826   
+[0]  01:47:43.9 WGS groups [0-360]: Iteration = 82    Point-wise change = 18.8466        Spectral-radius estimate = 0.924997  
+[0]  01:48:19.7 WGS groups [0-360]: Iteration = 83    Point-wise change = 10.5036        Spectral-radius estimate = 0.746537  
+[0]  01:48:55.4 WGS groups [0-360]: Iteration = 84    Point-wise change = 9.71153        Spectral-radius estimate = 0.961558  
+[0]  01:49:31.1 WGS groups [0-360]: Iteration = 85    Point-wise change = 6.45479        Spectral-radius estimate = 0.815262  
+[0]  01:50:06.8 WGS groups [0-360]: Iteration = 86    Point-wise change = 5.73134        Spectral-radius estimate = 0.942296  
+[0]  01:50:42.7 WGS groups [0-360]: Iteration = 87    Point-wise change = 13.6647        Spectral-radius estimate = 1.54409   
+[0]  01:51:18.5 WGS groups [0-360]: Iteration = 88    Point-wise change = 9.33202        Spectral-radius estimate = 0.826396  
+[0]  01:51:54.3 WGS groups [0-360]: Iteration = 89    Point-wise change = 8.92259        Spectral-radius estimate = 0.977817  
+[0]  01:52:29.9 WGS groups [0-360]: Iteration = 90    Point-wise change = 4.50103        Spectral-radius estimate = 0.710249  
+[0]  01:53:04.6 WGS groups [0-360]: Iteration = 91    Point-wise change = 4.23022        Spectral-radius estimate = 0.96945   
+[0]  01:53:38.9 WGS groups [0-360]: Iteration = 92    Point-wise change = 7.01367        Spectral-radius estimate = 1.28763   
+[0]  01:54:13.3 WGS groups [0-360]: Iteration = 93    Point-wise change = 3.8649         Spectral-radius estimate = 0.742329  
+[0]  01:54:47.6 WGS groups [0-360]: Iteration = 94    Point-wise change = 2.30128        Spectral-radius estimate = 0.771642  
+[0]  01:55:21.9 WGS groups [0-360]: Iteration = 95    Point-wise change = 2.25415        Spectral-radius estimate = 0.989707  
+[0]  01:55:56.2 WGS groups [0-360]: Iteration = 96    Point-wise change = 3.23048        Spectral-radius estimate = 1.19713   
+[0]  01:56:30.4 WGS groups [0-360]: Iteration = 97    Point-wise change = 3.68575        Spectral-radius estimate = 1.06814   
+[0]  01:57:04.6 WGS groups [0-360]: Iteration = 98    Point-wise change = 3.65591        Spectral-radius estimate = 0.995945  
+[0]  01:57:38.8 WGS groups [0-360]: Iteration = 99    Point-wise change = 5.0212         Spectral-radius estimate = 1.17194   
+[0]  01:58:13.0 WGS groups [0-360]: Iteration = 100   Point-wise change = 2.52705        Spectral-radius estimate = 0.709419  
+[0]  01:58:47.2 WGS groups [0-360]: Iteration = 101   Point-wise change = 2.81947        Spectral-radius estimate = 1.05628   
+[0]  01:59:22.7 WGS groups [0-360]: Iteration = 102   Point-wise change = 2.12435        Spectral-radius estimate = 0.868018  
+[0]  01:59:58.4 WGS groups [0-360]: Iteration = 103   Point-wise change = 3.06379        Spectral-radius estimate = 1.20093   
+[0]  02:00:34.2 WGS groups [0-360]: Iteration = 104   Point-wise change = 2.06023        Spectral-radius estimate = 0.820028  
+[0]  02:01:10.0 WGS groups [0-360]: Iteration = 105   Point-wise change = 1.80337        Spectral-radius estimate = 0.935587  
+[0]  02:01:44.8 WGS groups [0-360]: Iteration = 106   Point-wise change = 1.48929        Spectral-radius estimate = 0.908756  
+[0]  02:02:19.1 WGS groups [0-360]: Iteration = 107   Point-wise change = 3.34684        Spectral-radius estimate = 1.49909   
+[0]  02:02:53.6 WGS groups [0-360]: Iteration = 108   Point-wise change = 2.42895        Spectral-radius estimate = 0.851907  
+[0]  02:03:28.1 WGS groups [0-360]: Iteration = 109   Point-wise change = 4.14498        Spectral-radius estimate = 1.30633   
+[0]  02:04:02.4 WGS groups [0-360]: Iteration = 110   Point-wise change = 1.58768        Spectral-radius estimate = 0.6189    
+[0]  02:04:36.6 WGS groups [0-360]: Iteration = 111   Point-wise change = 2.09809        Spectral-radius estimate = 1.14956   
+[0]  02:05:11.2 WGS groups [0-360]: Iteration = 112   Point-wise change = 0.770976       Spectral-radius estimate = 0.60619   
+[0]  02:05:45.3 WGS groups [0-360]: Iteration = 113   Point-wise change = 0.435003       Spectral-radius estimate = 0.751149  
+[0]  02:06:20.0 WGS groups [0-360]: Iteration = 114   Point-wise change = 0.306265       Spectral-radius estimate = 0.839078  
+[0]  02:06:54.8 WGS groups [0-360]: Iteration = 115   Point-wise change = 0.231244       Spectral-radius estimate = 0.868935  
+[0]  02:07:29.5 WGS groups [0-360]: Iteration = 116   Point-wise change = 0.178045       Spectral-radius estimate = 0.877464  
+[0]  02:08:05.4 WGS groups [0-360]: Iteration = 117   Point-wise change = 0.139049       Spectral-radius estimate = 0.883729  
+[0]  02:08:41.4 WGS groups [0-360]: Iteration = 118   Point-wise change = 0.109762       Spectral-radius estimate = 0.888467  
+[0]  02:09:17.3 WGS groups [0-360]: Iteration = 119   Point-wise change = 0.08736        Spectral-radius estimate = 0.892136  
+[0]  02:09:52.0 WGS groups [0-360]: Iteration = 120   Point-wise change = 0.0699825      Spectral-radius estimate = 0.895032  
+[0]  02:10:26.9 WGS groups [0-360]: Iteration = 121   Point-wise change = 0.0596151      Spectral-radius estimate = 0.922961  
+[0]  02:11:01.8 WGS groups [0-360]: Iteration = 122   Point-wise change = 0.0589945      Spectral-radius estimate = 0.994781  
+[0]  02:11:36.6 WGS groups [0-360]: Iteration = 123   Point-wise change = 0.0583411      Spectral-radius estimate = 0.994447  
+[0]  02:12:11.4 WGS groups [0-360]: Iteration = 124   Point-wise change = 0.0576541      Spectral-radius estimate = 0.994095  
+[0]  02:12:46.2 WGS groups [0-360]: Iteration = 125   Point-wise change = 0.056933       Spectral-radius estimate = 0.993726  
+[0]  02:13:21.0 WGS groups [0-360]: Iteration = 126   Point-wise change = 0.0561772      Spectral-radius estimate = 0.99334   
+[0]  02:13:55.8 WGS groups [0-360]: Iteration = 127   Point-wise change = 0.0553864      Spectral-radius estimate = 0.992937  
+[0]  02:14:30.5 WGS groups [0-360]: Iteration = 128   Point-wise change = 0.0545605      Spectral-radius estimate = 0.992515  
+[0]  02:15:06.3 WGS groups [0-360]: Iteration = 129   Point-wise change = 0.0536992      Spectral-radius estimate = 0.992076  
+[0]  02:15:42.4 WGS groups [0-360]: Iteration = 130   Point-wise change = 0.052803       Spectral-radius estimate = 0.991619  
+[0]  02:16:18.3 WGS groups [0-360]: Iteration = 131   Point-wise change = 0.0518719      Spectral-radius estimate = 0.991145  
+[0]  02:16:53.3 WGS groups [0-360]: Iteration = 132   Point-wise change = 0.0509068      Spectral-radius estimate = 0.990653  
+[0]  02:17:28.3 WGS groups [0-360]: Iteration = 133   Point-wise change = 0.0499083      Spectral-radius estimate = 0.990144  
+[0]  02:18:03.3 WGS groups [0-360]: Iteration = 134   Point-wise change = 0.0488775      Spectral-radius estimate = 0.989619  
+[0]  02:18:38.1 WGS groups [0-360]: Iteration = 135   Point-wise change = 0.0478157      Spectral-radius estimate = 0.989078  
+[0]  02:19:12.9 WGS groups [0-360]: Iteration = 136   Point-wise change = 0.0467243      Spectral-radius estimate = 0.988522  
+[0]  02:19:47.6 WGS groups [0-360]: Iteration = 137   Point-wise change = 0.0456052      Spectral-radius estimate = 0.987952  
+[0]  02:20:22.4 WGS groups [0-360]: Iteration = 138   Point-wise change = 0.0444603      Spectral-radius estimate = 0.987368  
+[0]  02:20:57.2 WGS groups [0-360]: Iteration = 139   Point-wise change = 0.0432918      Spectral-radius estimate = 0.986772  
+[0]  02:21:31.9 WGS groups [0-360]: Iteration = 140   Point-wise change = 0.0421022      Spectral-radius estimate = 0.986165  
+[0]  02:22:07.7 WGS groups [0-360]: Iteration = 141   Point-wise change = 0.0408942      Spectral-radius estimate = 0.985549  
+[0]  02:22:43.8 WGS groups [0-360]: Iteration = 142   Point-wise change = 0.0396704      Spectral-radius estimate = 0.984924  
+[0]  02:23:19.8 WGS groups [0-360]: Iteration = 143   Point-wise change = 0.0384339      Spectral-radius estimate = 0.984292  
+[0]  02:23:54.8 WGS groups [0-360]: Iteration = 144   Point-wise change = 0.0371878      Spectral-radius estimate = 0.983656  
+[0]  02:24:29.8 WGS groups [0-360]: Iteration = 145   Point-wise change = 0.0359353      Spectral-radius estimate = 0.983015  
+[0]  02:25:04.7 WGS groups [0-360]: Iteration = 146   Point-wise change = 0.0346796      Spectral-radius estimate = 0.982373  
+[0]  02:25:39.5 WGS groups [0-360]: Iteration = 147   Point-wise change = 0.033424       Spectral-radius estimate = 0.98173   
+[0]  02:26:14.3 WGS groups [0-360]: Iteration = 148   Point-wise change = 0.0321718      Spectral-radius estimate = 0.981089  
+[0]  02:26:49.1 WGS groups [0-360]: Iteration = 149   Point-wise change = 0.0309263      Spectral-radius estimate = 0.980451  
+[0]  02:27:23.8 WGS groups [0-360]: Iteration = 150   Point-wise change = 0.0296905      Spectral-radius estimate = 0.979818  
+[0]  02:27:58.6 WGS groups [0-360]: Iteration = 151   Point-wise change = 0.0284677      Spectral-radius estimate = 0.97919   
+[0]  02:28:33.3 WGS groups [0-360]: Iteration = 152   Point-wise change = 0.0272607      Spectral-radius estimate = 0.978571  
+[0]  02:29:08.9 WGS groups [0-360]: Iteration = 153   Point-wise change = 0.0260723      Spectral-radius estimate = 0.977961  
+[0]  02:29:45.1 WGS groups [0-360]: Iteration = 154   Point-wise change = 0.0249052      Spectral-radius estimate = 0.977361  
+[0]  02:30:21.2 WGS groups [0-360]: Iteration = 155   Point-wise change = 0.0237617      Spectral-radius estimate = 0.976773  
+[0]  02:30:56.3 WGS groups [0-360]: Iteration = 156   Point-wise change = 0.022644       Spectral-radius estimate = 0.976198  
+[0]  02:31:31.1 WGS groups [0-360]: Iteration = 157   Point-wise change = 0.0215541      Spectral-radius estimate = 0.975637  
+[0]  02:32:06.0 WGS groups [0-360]: Iteration = 158   Point-wise change = 0.0204937      Spectral-radius estimate = 0.975091  
+[0]  02:32:40.9 WGS groups [0-360]: Iteration = 159   Point-wise change = 0.0194643      Spectral-radius estimate = 0.974561  
+[0]  02:33:14.6 WGS groups [0-360]: Iteration = 160   Point-wise change = 0.0184671      Spectral-radius estimate = 0.974047  
+[0]  02:33:49.4 WGS groups [0-360]: Iteration = 161   Point-wise change = 0.0175031      Spectral-radius estimate = 0.973549  
+[0]  02:34:24.2 WGS groups [0-360]: Iteration = 162   Point-wise change = 0.016573       Spectral-radius estimate = 0.973069  
+[0]  02:34:59.0 WGS groups [0-360]: Iteration = 163   Point-wise change = 0.0156775      Spectral-radius estimate = 0.972607  
+[0]  02:35:33.6 WGS groups [0-360]: Iteration = 164   Point-wise change = 0.0148168      Spectral-radius estimate = 0.972162  
+[0]  02:36:08.5 WGS groups [0-360]: Iteration = 165   Point-wise change = 0.013991       Spectral-radius estimate = 0.971735  
+[0]  02:36:44.5 WGS groups [0-360]: Iteration = 166   Point-wise change = 0.0132001      Spectral-radius estimate = 0.971326  
+[0]  02:37:20.1 WGS groups [0-360]: Iteration = 167   Point-wise change = 0.012444       Spectral-radius estimate = 0.970935  
+[0]  02:37:56.9 WGS groups [0-360]: Iteration = 168   Point-wise change = 0.0117221      Spectral-radius estimate = 0.970561  
+[0]  02:38:31.1 WGS groups [0-360]: Iteration = 169   Point-wise change = 0.0110339      Spectral-radius estimate = 0.970204  
+[0]  02:39:06.1 WGS groups [0-360]: Iteration = 170   Point-wise change = 0.0103789      Spectral-radius estimate = 0.969865  
+[0]  02:39:40.7 WGS groups [0-360]: Iteration = 171   Point-wise change = 0.00975633     Spectral-radius estimate = 0.969542  
+[0]  02:40:15.3 WGS groups [0-360]: Iteration = 172   Point-wise change = 0.00916526     Spectral-radius estimate = 0.969235  
+[0]  02:40:49.7 WGS groups [0-360]: Iteration = 173   Point-wise change = 0.00860483     Spectral-radius estimate = 0.968944  
+[0]  02:41:24.1 WGS groups [0-360]: Iteration = 174   Point-wise change = 0.00807408     Spectral-radius estimate = 0.968669  
+[0]  02:41:58.4 WGS groups [0-360]: Iteration = 175   Point-wise change = 0.00757199     Spectral-radius estimate = 0.968408  
+[0]  02:42:32.7 WGS groups [0-360]: Iteration = 176   Point-wise change = 0.0070975      Spectral-radius estimate = 0.968161  
+[0]  02:43:07.0 WGS groups [0-360]: Iteration = 177   Point-wise change = 0.00664954     Spectral-radius estimate = 0.967928  
+[0]  02:43:41.7 WGS groups [0-360]: Iteration = 178   Point-wise change = 0.00622703     Spectral-radius estimate = 0.967709  
+[0]  02:44:17.5 WGS groups [0-360]: Iteration = 179   Point-wise change = 0.00582887     Spectral-radius estimate = 0.967501  
+[0]  02:44:53.4 WGS groups [0-360]: Iteration = 180   Point-wise change = 0.00545396     Spectral-radius estimate = 0.967306  
+[0]  02:45:29.5 WGS groups [0-360]: Iteration = 181   Point-wise change = 0.00510123     Spectral-radius estimate = 0.967122  
+[0]  02:46:04.8 WGS groups [0-360]: Iteration = 182   Point-wise change = 0.00476961     Spectral-radius estimate = 0.966949  
+[0]  02:46:39.5 WGS groups [0-360]: Iteration = 183   Point-wise change = 0.00445804     Spectral-radius estimate = 0.966787  
+[0]  02:47:14.2 WGS groups [0-360]: Iteration = 184   Point-wise change = 0.00416551     Spectral-radius estimate = 0.966634  
+[0]  02:47:49.0 WGS groups [0-360]: Iteration = 185   Point-wise change = 0.00389103     Spectral-radius estimate = 0.966491  
+[0]  02:48:23.7 WGS groups [0-360]: Iteration = 186   Point-wise change = 0.00363362     Spectral-radius estimate = 0.966357  
+[0]  02:48:58.4 WGS groups [0-360]: Iteration = 187   Point-wise change = 0.00339235     Spectral-radius estimate = 0.966231  
+[0]  02:49:33.0 WGS groups [0-360]: Iteration = 188   Point-wise change = 0.00316633     Spectral-radius estimate = 0.966112  
+[0]  02:50:07.7 WGS groups [0-360]: Iteration = 189   Point-wise change = 0.00295469     Spectral-radius estimate = 0.966002  
+[0]  02:50:42.3 WGS groups [0-360]: Iteration = 190   Point-wise change = 0.00275661     Spectral-radius estimate = 0.965898  
+[0]  02:51:16.9 WGS groups [0-360]: Iteration = 191   Point-wise change = 0.00257128     Spectral-radius estimate = 0.965801  
+[0]  02:51:52.2 WGS groups [0-360]: Iteration = 192   Point-wise change = 0.00239797     Spectral-radius estimate = 0.96571   
+[0]  02:52:28.2 WGS groups [0-360]: Iteration = 193   Point-wise change = 0.00223594     Spectral-radius estimate = 0.965625  
+[0]  02:53:03.7 WGS groups [0-360]: Iteration = 194   Point-wise change = 0.00208452     Spectral-radius estimate = 0.965546  
+[0]  02:53:39.1 WGS groups [0-360]: Iteration = 195   Point-wise change = 0.00194306     Spectral-radius estimate = 0.965472  
+[0]  02:54:15.2 WGS groups [0-360]: Iteration = 196   Point-wise change = 0.00181093     Spectral-radius estimate = 0.965402  
+[0]  02:54:50.7 WGS groups [0-360]: Iteration = 197   Point-wise change = 0.00168757     Spectral-radius estimate = 0.965337  
+[0]  02:55:25.4 WGS groups [0-360]: Iteration = 198   Point-wise change = 0.00157241     Spectral-radius estimate = 0.965277  
+[0]  02:56:00.1 WGS groups [0-360]: Iteration = 199   Point-wise change = 0.00146493     Spectral-radius estimate = 0.96522   
+[0]  02:56:34.8 WGS groups [0-360]: Iteration = 200   Point-wise change = 0.00136465     Spectral-radius estimate = 0.965167  
+[0]  02:57:09.5 WGS groups [0-360]: Iteration = 201   Point-wise change = 0.00127111     Spectral-radius estimate = 0.965118  
+[0]  02:57:44.1 WGS groups [0-360]: Iteration = 202   Point-wise change = 0.00118387     Spectral-radius estimate = 0.965072  
+[0]  02:58:18.8 WGS groups [0-360]: Iteration = 203   Point-wise change = 0.00110251     Spectral-radius estimate = 0.965029  
+[0]  02:58:53.3 WGS groups [0-360]: Iteration = 204   Point-wise change = 0.00102666     Spectral-radius estimate = 0.964989  
+[0]  02:59:27.9 WGS groups [0-360]: Iteration = 205   Point-wise change = 0.00095596     Spectral-radius estimate = 0.964952  
+[0]  03:00:02.5 WGS groups [0-360]: Iteration = 206   Point-wise change = 0.00089006     Spectral-radius estimate = 0.964917  
+[0]  03:00:37.6 WGS groups [0-360]: Iteration = 207   Point-wise change = 0.000828647    Spectral-radius estimate = 0.964884  
+[0]  03:01:13.5 WGS groups [0-360]: Iteration = 208   Point-wise change = 0.000771423    Spectral-radius estimate = 0.964854  
+[0]  03:01:49.5 WGS groups [0-360]: Iteration = 209   Point-wise change = 0.000718108    Spectral-radius estimate = 0.964825  
+[0]  03:02:25.5 WGS groups [0-360]: Iteration = 210   Point-wise change = 0.000668442    Spectral-radius estimate = 0.964799  
+[0]  03:03:01.0 WGS groups [0-360]: Iteration = 211   Point-wise change = 0.000622179    Spectral-radius estimate = 0.964774  
+[0]  03:03:35.6 WGS groups [0-360]: Iteration = 212   Point-wise change = 0.00057909     Spectral-radius estimate = 0.964751  
+[0]  03:04:10.4 WGS groups [0-360]: Iteration = 213   Point-wise change = 0.000538961    Spectral-radius estimate = 0.96473   
+[0]  03:04:45.1 WGS groups [0-360]: Iteration = 214   Point-wise change = 0.000501592    Spectral-radius estimate = 0.96471   
+[0]  03:05:19.7 WGS groups [0-360]: Iteration = 215   Point-wise change = 0.000466797    Spectral-radius estimate = 0.964691  
+[0]  03:05:54.3 WGS groups [0-360]: Iteration = 216   Point-wise change = 0.000434399    Spectral-radius estimate = 0.964674  
+[0]  03:06:29.0 WGS groups [0-360]: Iteration = 217   Point-wise change = 0.000404236    Spectral-radius estimate = 0.964658  
+[0]  03:07:03.5 WGS groups [0-360]: Iteration = 218   Point-wise change = 0.000376156    Spectral-radius estimate = 0.964643  
+[0]  03:07:38.0 WGS groups [0-360]: Iteration = 219   Point-wise change = 0.000350016    Spectral-radius estimate = 0.964629   CONVERGED
+[0]  
+[0]         Average sweep time (s):        25.2643
+[0]         Sweep Time/Unknown (ns):       698.634
+[0]         Number of unknowns per sweep:  904059520
+[0]  
+[0]  03:07:38.1 AGS Iteration 0     Error Norm 8.57724       
+[0]  03:07:38.5   Iteration     2  k_eff    1.181027  k_eff change       1530.4  reactivity    15327.9
+[0]  
+[0]  
+[0]  ********** Solving groupset 0 with CLASSIC_RICHARDSON.
+[0]  
+[0]  Quadrature number of angles: 64
+[0]  Groups 0 360
+[0]  
+[0]  03:08:13.9 WGS groups [0-360]: Iteration = 0     Point-wise change = 0.000862701    Spectral-radius estimate = 0          CONVERGED
+[0]  
+[0]         Average sweep time (s):        25.2668
+[0]         Sweep Time/Unknown (ns):       698.703
+[0]         Number of unknowns per sweep:  904059520
+[0]  
+[0]  03:08:14.0 AGS Iteration 0     Error Norm 8.57747       
+[0]  03:08:14.4   Iteration     3  k_eff    1.181024  k_eff change  2.23161e-06  reactivity   15327.71
+[0]  
+[0]  
+[0]  ********** Solving groupset 0 with CLASSIC_RICHARDSON.
+[0]  
+[0]  Quadrature number of angles: 64
+[0]  Groups 0 360
+[0]  
+[0]  03:08:50.9 WGS groups [0-360]: Iteration = 0     Point-wise change = 0.0011853      Spectral-radius estimate = 0          CONVERGED
+[0]  
+[0]         Average sweep time (s):        25.2699
+[0]         Sweep Time/Unknown (ns):       698.79
+[0]         Number of unknowns per sweep:  904059520
+[0]  
+[0]  03:08:51.0 AGS Iteration 0     Error Norm 8.57756       
+[0]  03:08:51.4   Iteration     4  k_eff    1.181026  k_eff change 1.790333e-06  reactivity   15327.86
+[0]  
+[0]  
+[0]  ********** Solving groupset 0 with CLASSIC_RICHARDSON.
+[0]  
+[0]  Quadrature number of angles: 64
+[0]  Groups 0 360
+[0]  
+[0]  03:09:28.0 WGS groups [0-360]: Iteration = 0     Point-wise change = 0.00118538     Spectral-radius estimate = 0          CONVERGED
+[0]  
+[0]         Average sweep time (s):        25.2732
+[0]         Sweep Time/Unknown (ns):       698.882
+[0]         Number of unknowns per sweep:  904059520
+[0]  
+[0]  03:09:28.1 AGS Iteration 0     Error Norm 8.57758       
+[0]  03:09:28.4   Iteration     5  k_eff    1.181026  k_eff change 4.320001e-07  reactivity   15327.89 CONVERGED
+[0]  
+[0]          Final k-eigenvalue    :        1.181026
+[0]          Final change          :        4.32e-07 (Total number of sweeps:328)
+[0]  
+[0]  LinearBoltzmann::KEigenvalueSolver execution completed
+[0]  
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+cell name frequency:
+"fu": 264
+"gt": 24
+"it": 1
+total:  289
+
+Elapsed execution time: 03:09:39.9
+2025-04-30 19:11:38 OpenSn finished execution.
