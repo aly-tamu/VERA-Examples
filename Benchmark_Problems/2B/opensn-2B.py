@@ -47,7 +47,7 @@ block_ids = [i for i in range(0, len(xs_list))]
 
 scat_order = 3  # xs_list[0].scattering_order
 
-pquad = GLCProductQuadrature2DXY(16, 8)
+pquad = GLCProductQuadrature2DXY(4, 32)
 
 num_groups = 361
 
@@ -103,7 +103,7 @@ phys.SetOptions(
     restart_writes_enabled=True,
     write_delayed_psi_to_restart=True,
     write_restart_path="./2B_",
-    # read_restart_path="./2B_",
+    #read_restart_path="./restart_32_4_tight/2B_",
 )
 
 
@@ -115,7 +115,7 @@ keff = k_solver.GetEigenvalue()
 fflist = phys.GetScalarFieldFunctionList()
 
 
-def compute_cell_center(i, j, num_cells, pitch):
+def compute_cell_center_old(i, j, num_cells, pitch):
     """
     i, j are in {0, 1, …, num_cells-1}.
     Returns (x_center, y_center) so that:
@@ -127,6 +127,15 @@ def compute_cell_center(i, j, num_cells, pitch):
     y_center = (j - center_index) * pitch
     return x_center, y_center
 
+
+def compute_cell_center(i, j, offset_x, offset_y):
+    """
+    i, j are in {0, 1, …, num_cells-1}.
+    Returns (x_center, y_center)
+    """
+    x_center = i * pitch + offset_x 
+    y_center = j * pitch + offset_y
+    return x_center, y_center
 
 def read_csv_to_2d_array(file_path):
     with open(file_path, newline="", encoding="utf-8") as csvfile:
@@ -158,19 +167,25 @@ num_cells = lattice_csv.shape[0]
 if num_cells != lattice_csv.shape[1]:
     raise Exception("CSV array of cell names is not square.")
 
-val_table = np.zeros([num_cells, num_cells])
-
 fuel_xs = xs_dict["fuel"]
 sig_f = np.array(fuel_xs.sigma_f)
 
 pitch = 1.26
 
+num_cells_quarter = np.ceil(num_cells/2).astype(np.int64)
+quarter_lattice_center = -5.375
+
+offset_x = -4.705
+offset_y =  4.705 - 16*pitch
+
+val_table = np.zeros([num_cells, num_cells])
+
 for i in range(num_cells):
     for j in range(num_cells):
         if lattice_csv[i, j] == "fu":
-            x_center, y_center = compute_cell_center(i, j, num_cells, pitch)
+            x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
             if rank == 0:
-                print("centers=", x_center, y_center)
+                print("centers=", i, j, x_center, y_center)
             my_lv = RCCLogicalVolume(r=0.4060, x0=x_center, y0=y_center, z0=-1.0, vz=2.0)
 
             val = 0
@@ -185,14 +200,31 @@ for i in range(num_cells):
                 val += val_g * sig_f[g]
             val_table[i, j] = val
 
-norm = np.sum(val_table) / cell_frequencies["fu"]
+val_table_ori = val_table.copy()
 
+val_table = np.flip(val_table, axis=1)
+# quarter array
+A = val_table[:num_cells_quarter, :num_cells_quarter]
+A[:,-1] *= 2.
+A[-1,:] *= 2.
+val_table_quarter = A.copy()
+A_flipped = np.flip(A, axis=1)
+B = np.hstack([A,A_flipped[:,1:]])
+B_flipped = np.flip(B, axis=0)
+val_table = np.vstack([B,B_flipped[1:,:]])
+
+norm = np.sum(val_table) / cell_frequencies["fu"]
 val_table /= norm
 
 MPIBarrier()
 
 if rank == 0:
+    print("sum=", np.sum(val_table_quarter))
     np.savetxt("power.txt", val_table)
-    print("sum=", np.sum(val_table))
+    np.savetxt("power_quarter.txt", val_table_quarter)
+    np.savetxt("power_ori.txt", val_table_ori)
     with open("keff.txt", "w") as file:
         file.write(str(keff))
+
+vtk_basename = "flx_4_32_"
+#FieldFunctionGridBased.ExportMultipleToVTK([fflist[g] for g in range(num_groups)], vtk_basename)
