@@ -47,7 +47,7 @@ block_ids = [i for i in range(0, len(xs_list))]
 
 scat_order = 3  # xs_list[0].scattering_order
 
-pquad = GLCProductQuadrature2DXY(8, 4)
+pquad = GLCProductQuadrature2DXY(8, 32)
 
 num_groups = xs_list[0].num_groups
 
