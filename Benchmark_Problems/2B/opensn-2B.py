@@ -219,10 +219,10 @@ val_table /= norm
 MPIBarrier()
 
 if rank == 0:
-    print("sum=", np.sum(val_table_quarter))
+    #print("sum=", np.sum(val_table))
     np.savetxt("power.txt", val_table)
-    np.savetxt("power_quarter.txt", val_table_quarter)
-    np.savetxt("power_ori.txt", val_table_ori)
+    #np.savetxt("power_quarter.txt", val_table_quarter)
+    #np.savetxt("power_ori.txt", val_table_ori)
     with open("keff.txt", "w") as file:
         file.write(str(keff))
 
