@@ -829,7 +829,7 @@ def make_mesh_object(casename):
             colors.append(color_list[id_])
         lattice.plot_polygons(colors=colors, size_=0.1, lw_=0.2)
 
-    lattice.export_to_obj("lattice_{}.obj".format(casename))
+    lattice.export_to_obj("{0:}/lattice_{0:}.obj".format(casename))
 
     # %% verif area
     pt_min = np.min(lattice.vertices, axis=0)
