@@ -12,6 +12,9 @@ sys.path.append("../../..")
 casename = '2H'
 h5_name = '2h'
 
+if (casename not in path) and ("Benchmark_Problems/" not in path):
+    path = path + "/" + casename
+
 mesh_filepath = path+'/'+'lattice_'+casename+'.obj'
 meshgen = FromFileMeshGenerator(
     filename=mesh_filepath,
@@ -19,24 +22,24 @@ meshgen = FromFileMeshGenerator(
 )
 
 grid = meshgen.Execute()
-grid.ExportToPVTU('mesh_2H')
+grid.ExportToPVTU("mesh_"+casename)
 
 xs_filepath = path+'/'+'mgxs_casl_'+h5_name+'/mgxs_'+h5_name+'_one_eighth_SHEM-361.h5'
 xs_dict = {}
 xs_list = []
 
 h5_mat_names = ['b4c', 
-		'b4c_clad',
+                'b4c_clad',
                 'fuel',
                 'clad', 
-		'gap', 
-		'b4c_gap',
+                'gap', 
+                'b4c_gap',
                 'b4c_guide',
                 'it-clad', 
-		'it-water-in', 
-		'it-water-out',
+                'it-water-in', 
+                'it-water-out',
                 'moderator',
-		'b4c_water',
+                'b4c_water',
                 'water_outside']
 
 for name in h5_mat_names:
@@ -87,9 +90,10 @@ xs_mapping = [
             {'block_ids' : [8],'xs' : xs_list[8]},
             {'block_ids' : [9],'xs' : xs_list[9]},
             {'block_ids' : [10],'xs' : xs_list[10]},
-	    {'block_ids' : [11],'xs' : xs_list[11]},
+            {'block_ids' : [11],'xs' : xs_list[11]},
             {'block_ids' : [12],'xs' : xs_list[12]}
             ]
+
 phys = DiscreteOrdinatesProblem(
     mesh=grid, num_groups=num_groups, groupsets=group_sets, xs_map=xs_mapping
 )
@@ -145,15 +149,12 @@ def read_csv_to_2d_array(file_path):
         data = [row for row in reader]
     return np.asarray(data)
 
-
 def count_frequencies(data):
     flattened_data = [item for row in data for item in row]  # Flatten 2D array into a 1D list
     return Counter(flattened_data)
 
-
-your_files = os.getcwd()
 csv_filename = "FA_cell_names_1_family.csv"
-csv_filepath = your_files + "/" + csv_filename
+csv_filepath = path + "/" + csv_filename
 lattice_csv = read_csv_to_2d_array(csv_filepath)
 
 cell_frequencies = count_frequencies(lattice_csv)

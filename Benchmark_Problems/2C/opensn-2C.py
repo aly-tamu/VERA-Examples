@@ -12,13 +12,16 @@ sys.path.append("../../..")
 casename = "2C"
 h5_name = "2c"
 
+if (casename not in path) and ("Benchmark_Problems/" not in path):
+    path = path + "/" + casename
+
 mesh_filepath = path + "/" + "lattice_" + casename + ".obj"
 meshgen = FromFileMeshGenerator(
     filename=mesh_filepath, partitioner=PETScGraphPartitioner(type="parmetis")
 )
 
 grid = meshgen.Execute()
-grid.ExportToPVTU("mesh_2C")
+grid.ExportToPVTU("mesh_"+casename)
 
 xs_filepath = path + "/" + "mgxs_casl_" + h5_name + "/mgxs_" + h5_name + "_one_eighth_SHEM-361.h5"
 xs_dict = {}
@@ -149,9 +152,8 @@ def count_frequencies(data):
     return Counter(flattened_data)
 
 
-your_files = os.getcwd()
 csv_filename = "FA_cell_names_1_family.csv"
-csv_filepath = your_files + "/" + csv_filename
+csv_filepath = path + "/" + csv_filename
 lattice_csv = read_csv_to_2d_array(csv_filepath)
 
 cell_frequencies = count_frequencies(lattice_csv)

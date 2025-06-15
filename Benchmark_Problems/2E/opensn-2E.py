@@ -12,13 +12,16 @@ sys.path.append("../../..")
 casename = "2E"
 h5_name = "2e"
 
+if (casename not in path) and ("Benchmark_Problems/" not in path):
+    path = path + "/" + casename
+    
 mesh_filepath = path + "/" + "lattice_" + casename + ".obj"
 meshgen = FromFileMeshGenerator(
     filename=mesh_filepath, partitioner=PETScGraphPartitioner(type="parmetis")
 )
 
 grid = meshgen.Execute()
-grid.ExportToPVTU("mesh_2E")
+grid.ExportToPVTU("mesh_"+casename)
 
 xs_filepath = path + "/" + "mgxs_casl_" + h5_name + "/mgxs_" + h5_name + "_one_eighth_SHEM-361.h5"
 xs_dict = {}
@@ -90,11 +93,11 @@ xs_mapping = [
             {'block_ids' : [7],'xs' : xs_list[7]},
             {'block_ids' : [8],'xs' : xs_list[8]},
             {'block_ids' : [9],'xs' : xs_list[9]},
-	    {'block_ids' : [10],'xs' : xs_list[10]},
-	    {'block_ids' : [11],'xs' : xs_list[11]},
-	    {'block_ids' : [12],'xs' : xs_list[12]},
-	    {'block_ids' : [13],'xs' : xs_list[13]},
-	    {'block_ids' : [14],'xs' : xs_list[14]},
+    	    {'block_ids' : [10],'xs' : xs_list[10]},
+    	    {'block_ids' : [11],'xs' : xs_list[11]},
+    	    {'block_ids' : [12],'xs' : xs_list[12]},
+    	    {'block_ids' : [13],'xs' : xs_list[13]},
+    	    {'block_ids' : [14],'xs' : xs_list[14]},
             {'block_ids' : [15],'xs' : xs_list[15]}
             ]
 
@@ -153,15 +156,13 @@ def read_csv_to_2d_array(file_path):
         data = [row for row in reader]
     return np.asarray(data)
 
-
 def count_frequencies(data):
     flattened_data = [item for row in data for item in row]  # Flatten 2D array into a 1D list
     return Counter(flattened_data)
 
 
-your_files = os.getcwd()
 csv_filename = "FA_cell_names_1_family.csv"
-csv_filepath = your_files + "/" + csv_filename
+csv_filepath = path + "/" + csv_filename
 lattice_csv = read_csv_to_2d_array(csv_filepath)
 
 cell_frequencies = count_frequencies(lattice_csv)
