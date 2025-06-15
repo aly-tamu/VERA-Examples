@@ -9,44 +9,43 @@ path = os.getcwd()
 
 sys.path.append("../../..")
 
-casename = '2G'
-h5_name = '2g'
+casename = "2A"
+h5_name = "2a"
 
-mesh_filepath = path+'/'+'lattice_'+casename+'.obj'
+mesh_filepath = path + "/" + "lattice_" + casename + ".obj"
 meshgen = FromFileMeshGenerator(
-    filename=mesh_filepath,
-    partitioner=PETScGraphPartitioner(type='parmetis')
+    filename=mesh_filepath, partitioner=PETScGraphPartitioner(type="parmetis")
 )
 
 grid = meshgen.Execute()
-grid.ExportToPVTU('mesh_2G')
+grid.ExportToPVTU("mesh_2A")
 
-xs_filepath = path+'/'+'mgxs_casl_'+h5_name+'/mgxs_'+h5_name+'_one_eighth_SHEM-361.h5'
+xs_filepath = path + "/" + "mgxs_casl_" + h5_name + "/mgxs_" + h5_name + "_one_eighth_SHEM-361.h5"
 xs_dict = {}
 xs_list = []
 
-h5_mat_names = ['aic', 
-		'aic_clad',
-                'fuel',
-                'clad', 
-		'gap', 
-		'aic_gap',
-                'aic_guide',
-                'it-clad', 
-		'it-water-in', 
-		'it-water-out',
-                'moderator',
-		'aic_water',
-                'water_outside']
+h5_mat_names = [
+    "fuel",
+    "fuel clad",
+    "fuel gap",
+    "gt-clad",
+    "gt-water-in",
+    "gt-water-out",
+    "it-clad",
+    "it-water-in",
+    "it-water-out",
+    "moderator",
+    "water_outside",
+]
 
 for name in h5_mat_names:
     xs_dict[name] = MultiGroupXS()
     xs_dict[name].LoadFromOpenMC(xs_filepath, name, 294.0)
-    xs_list = np.append(xs_list,xs_dict[name])
+    xs_list = np.append(xs_list, xs_dict[name])
 
-block_ids = [i for i in range(0,len(xs_list))]
+block_ids = [i for i in range(0, len(xs_list))]
 
-scat_order = 3 #xs_list[0].scattering_order
+scat_order = 3  # xs_list[0].scattering_order
 
 pquad = GLCProductQuadrature2DXY(4, 32)
 
@@ -76,20 +75,18 @@ bound_conditions = [
 
 # fix this when automating it stops breaking
 xs_mapping = [
-            {'block_ids' : [0],'xs' : xs_list[0]},
-            {'block_ids' : [1],'xs' : xs_list[1]},
-            {'block_ids' : [2],'xs' : xs_list[2]},
-            {'block_ids' : [3],'xs' : xs_list[3]},
-            {'block_ids' : [4],'xs' : xs_list[4]},
-            {'block_ids' : [5],'xs' : xs_list[5]},
-            {'block_ids' : [6],'xs' : xs_list[6]},
-            {'block_ids' : [7],'xs' : xs_list[7]},
-            {'block_ids' : [8],'xs' : xs_list[8]},
-            {'block_ids' : [9],'xs' : xs_list[9]},
-            {'block_ids' : [10],'xs' : xs_list[10]},
-	    {'block_ids' : [11],'xs' : xs_list[11]},
-            {'block_ids' : [12],'xs' : xs_list[12]}
-            ]
+    {"block_ids": [0], "xs": xs_list[0]},
+    {"block_ids": [1], "xs": xs_list[1]},
+    {"block_ids": [2], "xs": xs_list[2]},
+    {"block_ids": [3], "xs": xs_list[3]},
+    {"block_ids": [4], "xs": xs_list[4]},
+    {"block_ids": [5], "xs": xs_list[5]},
+    {"block_ids": [6], "xs": xs_list[6]},
+    {"block_ids": [7], "xs": xs_list[7]},
+    {"block_ids": [8], "xs": xs_list[8]},
+    {"block_ids": [9], "xs": xs_list[9]},
+    {"block_ids": [10], "xs": xs_list[10]},
+]
 
 phys = DiscreteOrdinatesProblem(
     mesh=grid, num_groups=num_groups, groupsets=group_sets, xs_map=xs_mapping
@@ -105,8 +102,8 @@ phys.SetOptions(
     boundary_conditions=bound_conditions,
     restart_writes_enabled=True,
     write_delayed_psi_to_restart=True,
-    write_restart_path="./2G_",
-    #read_restart_path="./restart_32_4_tight/2G_",
+    write_restart_path="./2A_",
+    #read_restart_path="./restart_32_4_tight/2A_",
 )
 
 

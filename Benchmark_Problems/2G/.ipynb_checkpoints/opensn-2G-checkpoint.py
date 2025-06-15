@@ -9,8 +9,8 @@ path = os.getcwd()
 
 sys.path.append("../../..")
 
-casename = '2E'
-h5_name = '2e'
+casename = '2G'
+h5_name = '2g'
 
 mesh_filepath = path+'/'+'lattice_'+casename+'.obj'
 meshgen = FromFileMeshGenerator(
@@ -25,22 +25,19 @@ xs_filepath = path+'/'+'mgxs_casl_'+h5_name+'/mgxs_'+h5_name+'_one_eighth_SHEM-3
 xs_dict = {}
 xs_list = []
 
-h5_mat_names = ['fuel', 
-		'clad', 
+h5_mat_names = ['aic', 
+		'aic_clad',
+                'fuel',
+                'clad', 
 		'gap', 
-		'pyrex_gap',
-                'gt-clad', 
-		'gt-water-in', 
-		'gt-water-out', 
-		'pyrex_guide',
+		'aic_gap',
+                'aic_guide',
                 'it-clad', 
 		'it-water-in', 
-		'it-water-out', 
-                'moderator', 
-		'pyrex',
-		'pyrex_clad',
-		'pyrex_water',
-		'water_outside']
+		'it-water-out',
+                'moderator',
+		'aic_water',
+                'water_outside']
 
 for name in h5_mat_names:
     xs_dict[name] = MultiGroupXS()
@@ -86,14 +83,10 @@ xs_mapping = [
             {'block_ids' : [7],'xs' : xs_list[7]},
             {'block_ids' : [8],'xs' : xs_list[8]},
             {'block_ids' : [9],'xs' : xs_list[9]},
-	    {'block_ids' : [10],'xs' : xs_list[10]},
+            {'block_ids' : [10],'xs' : xs_list[10]},
 	    {'block_ids' : [11],'xs' : xs_list[11]},
-	    {'block_ids' : [12],'xs' : xs_list[12]},
-	    {'block_ids' : [13],'xs' : xs_list[13]},
-	    {'block_ids' : [14],'xs' : xs_list[14]},
-            {'block_ids' : [15],'xs' : xs_list[15]}
+            {'block_ids' : [12],'xs' : xs_list[12]}
             ]
-
 phys = DiscreteOrdinatesProblem(mesh=grid,
                                 num_groups=num_groups,
                                 groupsets= group_sets,
