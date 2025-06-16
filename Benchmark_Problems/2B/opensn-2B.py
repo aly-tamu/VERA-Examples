@@ -18,7 +18,7 @@ meshgen = FromFileMeshGenerator(
 )
 
 grid = meshgen.Execute()
-grid.ExportToPVTU("mesh_2B")
+grid.ExportToPVTU('mesh_'+casename)
 
 xs_filepath = path + "/" + "mgxs_casl_" + h5_name + "/mgxs_" + h5_name + "_one_eighth_SHEM-361.h5"
 xs_dict = {}
@@ -47,9 +47,9 @@ block_ids = [i for i in range(0, len(xs_list))]
 
 scat_order = 3  # xs_list[0].scattering_order
 
-pquad = GLCProductQuadrature2DXY(4, 32)
+pquad = GLCProductQuadrature2DXY(n_polar=4, n_azimuthal=32)
 
-num_groups = 361
+num_groups = xs_list[0].num_groups
 
 group_sets = [
     {
