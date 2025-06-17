@@ -9,39 +9,37 @@ path = os.getcwd()
 
 sys.path.append("../../..")
 
-casename = '2K'
-h5_name = '2k'
+casename = "2E"
+h5_name = "2e"
 
 if (casename not in path) and ("Benchmark_Problems/" not in path):
     path = path + "/" + casename
-
-mesh_filepath = path+'/'+'lattice_'+casename+'.obj'
+    
+mesh_filepath = path + "/" + "lattice_" + casename + ".obj"
 meshgen = FromFileMeshGenerator(
-    filename=mesh_filepath,
-    partitioner=PETScGraphPartitioner(type='parmetis')
+    filename=mesh_filepath, partitioner=PETScGraphPartitioner(type="parmetis")
 )
 
 grid = meshgen.Execute()
 grid.ExportToPVTU("mesh_"+casename)
 
-xs_filepath = path+'/'+'mgxs_casl_'+h5_name+'/mgxs_'+h5_name+'_one_eighth_SHEM-361.h5'
+xs_filepath = path + "/" + "mgxs_casl_" + h5_name + "/mgxs_" + h5_name + "_one_eighth_SHEM-361.h5"
 xs_dict = {}
 xs_list = []
 
 h5_mat_names = [
-        'high_fuel_clad',
-		'low_fuel_clad',
-		'high_fuel',
-		'low_fuel',
+        'fuel', 
+		'clad', 
+		'gap', 
 		'pyrex_gap',
-		'high_fuel_gap',
-		'low_fuel_gap',
+        'gt-clad', 
+		'gt-water-in', 
+		'gt-water-out', 
 		'pyrex_guide',
-		'it-clad',
-		'it-water-in',
-		'it-water-out',
-		'high_fuel_moderator',
-		'low_fuel_moderator',
+        'it-clad', 
+		'it-water-in', 
+		'it-water-out', 
+        'moderator', 
 		'pyrex',
 		'pyrex_clad',
 		'pyrex_water',
@@ -95,13 +93,12 @@ xs_mapping = [
             {'block_ids' : [7],'xs' : xs_list[7]},
             {'block_ids' : [8],'xs' : xs_list[8]},
             {'block_ids' : [9],'xs' : xs_list[9]},
-            {'block_ids' : [10],'xs' : xs_list[10]},
-            {'block_ids' : [11],'xs' : xs_list[11]},
-            {'block_ids' : [12],'xs' : xs_list[12]},
-            {'block_ids' : [13],'xs' : xs_list[13]},
-            {'block_ids' : [14],'xs' : xs_list[14]},
-            {'block_ids' : [15],'xs' : xs_list[15]},
-            {'block_ids' : [16],'xs' : xs_list[16]}
+    	    {'block_ids' : [10],'xs' : xs_list[10]},
+    	    {'block_ids' : [11],'xs' : xs_list[11]},
+    	    {'block_ids' : [12],'xs' : xs_list[12]},
+    	    {'block_ids' : [13],'xs' : xs_list[13]},
+    	    {'block_ids' : [14],'xs' : xs_list[14]},
+            {'block_ids' : [15],'xs' : xs_list[15]}
             ]
 
 phys = DiscreteOrdinatesProblem(
@@ -118,8 +115,8 @@ phys.SetOptions(
     boundary_conditions=bound_conditions,
     restart_writes_enabled=True,
     write_delayed_psi_to_restart=True,
-    write_restart_path="./2K_",
-    #read_restart_path="./restart_32_4_tight/2B_",
+    write_restart_path="./2E_",
+    #read_restart_path="./restart_32_4_tight/2E_",
 )
 
 
@@ -196,28 +193,7 @@ val_table = np.zeros([num_cells, num_cells])
 
 for i in range(num_cells):
     for j in range(num_cells):
-        if lattice_csv[i, j] == "fuh":
-            fuel_xs = xs_dict["high_fuel"]
-            sig_f = np.array(fuel_xs.sigma_f)
-            x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
-            if rank == 0:
-                print("centers=", i, j, x_center, y_center)
-            my_lv = RCCLogicalVolume(r=0.4060, x0=x_center, y0=y_center, z0=-1.0, vz=2.0)
-
-            val = 0
-            for g in range(0, num_groups):
-                ffi = FieldFunctionInterpolationVolume()
-                ffi.SetOperationType("sum")
-                ffi.SetLogicalVolume(my_lv)
-                ffi.AddFieldFunction(fflist[g])
-                ffi.Initialize()
-                ffi.Execute()
-                val_g = ffi.GetValue()
-                val += val_g * sig_f[g]
-            val_table[i, j] = val
-        if lattice_csv[i, j] == "ful":
-            fuel_xs = xs_dict["low_fuel"]
-            sig_f = np.array(fuel_xs.sigma_f)
+        if lattice_csv[i, j] == "fu":
             x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
             if rank == 0:
                 print("centers=", i, j, x_center, y_center)
@@ -248,7 +224,7 @@ B = np.hstack([A,A_flipped[:,1:]])
 B_flipped = np.flip(B, axis=0)
 val_table = np.vstack([B,B_flipped[1:,:]])
 
-norm = np.sum(val_table) / (cell_frequencies["fuh"] + cell_frequencies["ful"])
+norm = np.sum(val_table) / cell_frequencies["fu"]
 val_table /= norm
 
 MPIBarrier()

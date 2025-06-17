@@ -5,12 +5,15 @@ import csv
 from collections import Counter
 import matplotlib.pyplot as plt
 
+# run with:
+# mpiexec -n 8 /home/aly/opensn/opensn/build/python/opensn -i "/home/aly/GitHub/VERA-Examples/Benchmark_Problems/2B/opensn-2B.py"
+
 path = os.getcwd()
 
 sys.path.append("../../..")
 
-casename = '2K'
-h5_name = '2k'
+casename = '2B'
+h5_name = '2b'
 
 if (casename not in path) and ("Benchmark_Problems/" not in path):
     path = path + "/" + casename
@@ -22,42 +25,36 @@ meshgen = FromFileMeshGenerator(
 )
 
 grid = meshgen.Execute()
-grid.ExportToPVTU("mesh_"+casename)
+grid.ExportToPVTU('mesh'+casename)
 
 xs_filepath = path+'/'+'mgxs_casl_'+h5_name+'/mgxs_'+h5_name+'_one_eighth_SHEM-361.h5'
 xs_dict = {}
 xs_list = []
 
 h5_mat_names = [
-        'high_fuel_clad',
-		'low_fuel_clad',
-		'high_fuel',
-		'low_fuel',
-		'pyrex_gap',
-		'high_fuel_gap',
-		'low_fuel_gap',
-		'pyrex_guide',
-		'it-clad',
-		'it-water-in',
-		'it-water-out',
-		'high_fuel_moderator',
-		'low_fuel_moderator',
-		'pyrex',
-		'pyrex_clad',
-		'pyrex_water',
-		'water_outside'
+    "fuel",
+    "fuel clad",
+    "fuel gap",
+    "gt-clad",
+    "gt-water-in",
+    "gt-water-out",
+    "it-clad",
+    "it-water-in",
+    "it-water-out",
+    "moderator",
+    "water_outside",
 ]
 
 for name in h5_mat_names:
     xs_dict[name] = MultiGroupXS()
     xs_dict[name].LoadFromOpenMC(xs_filepath, name, 294.0)
-    xs_list = np.append(xs_list, xs_dict[name])
+    xs_list = np.append(xs_list,xs_dict[name])
 
-block_ids = [i for i in range(0, len(xs_list))]
+block_ids = [i for i in range(0,len(xs_list))]
 
-scat_order = 3  # xs_list[0].scattering_order
+scat_order = 3 #xs_list[0].scattering_order
 
-pquad = GLCProductQuadrature2DXY(4, 32)
+pquad = GLCProductQuadrature2DXY(32, 4)
 
 num_groups = 361
 
@@ -73,7 +70,7 @@ group_sets = [
     }
 ]
 
-# fix this when automating it stops breaking
+
 bound_conditions = [
     {"name": "xmin", "type": "reflecting"},
     {"name": "xmax", "type": "reflecting"},
@@ -83,30 +80,27 @@ bound_conditions = [
     {"name": "zmax", "type": "reflecting"},
 ]
 
-# fix this when automating it stops breaking
+
 xs_mapping = [
-            {'block_ids' : [0],'xs' : xs_list[0]},
-            {'block_ids' : [1],'xs' : xs_list[1]},
-            {'block_ids' : [2],'xs' : xs_list[2]},
-            {'block_ids' : [3],'xs' : xs_list[3]},
-            {'block_ids' : [4],'xs' : xs_list[4]},
-            {'block_ids' : [5],'xs' : xs_list[5]},
-            {'block_ids' : [6],'xs' : xs_list[6]},
-            {'block_ids' : [7],'xs' : xs_list[7]},
-            {'block_ids' : [8],'xs' : xs_list[8]},
-            {'block_ids' : [9],'xs' : xs_list[9]},
-            {'block_ids' : [10],'xs' : xs_list[10]},
-            {'block_ids' : [11],'xs' : xs_list[11]},
-            {'block_ids' : [12],'xs' : xs_list[12]},
-            {'block_ids' : [13],'xs' : xs_list[13]},
-            {'block_ids' : [14],'xs' : xs_list[14]},
-            {'block_ids' : [15],'xs' : xs_list[15]},
-            {'block_ids' : [16],'xs' : xs_list[16]}
-            ]
+    {"block_ids": [0], "xs": xs_list[0]},
+    {"block_ids": [1], "xs": xs_list[1]},
+    {"block_ids": [2], "xs": xs_list[2]},
+    {"block_ids": [3], "xs": xs_list[3]},
+    {"block_ids": [4], "xs": xs_list[4]},
+    {"block_ids": [5], "xs": xs_list[5]},
+    {"block_ids": [6], "xs": xs_list[6]},
+    {"block_ids": [7], "xs": xs_list[7]},
+    {"block_ids": [8], "xs": xs_list[8]},
+    {"block_ids": [9], "xs": xs_list[9]},
+    {"block_ids": [10], "xs": xs_list[10]},
+]
 
 phys = DiscreteOrdinatesProblem(
-    mesh=grid, num_groups=num_groups, groupsets=group_sets, xs_map=xs_mapping
-)
+                                mesh=grid,
+                                num_groups=num_groups,
+                                groupsets= group_sets,
+                                xs_map=xs_mapping
+                                )
 phys.SetOptions(
     scattering_order=scat_order,
     verbose_inner_iterations=True,
@@ -118,7 +112,7 @@ phys.SetOptions(
     boundary_conditions=bound_conditions,
     restart_writes_enabled=True,
     write_delayed_psi_to_restart=True,
-    write_restart_path="./2K_",
+    write_restart_path="./2B_",
     #read_restart_path="./restart_32_4_tight/2B_",
 )
 
@@ -152,9 +146,9 @@ def compute_cell_center(i, j, offset_x, offset_y):
     x_center = i * pitch + offset_x 
     y_center = j * pitch + offset_y
     return x_center, y_center
-
+    
 def read_csv_to_2d_array(file_path):
-    with open(file_path, newline="", encoding="utf-8") as csvfile:
+    with open(file_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile)
         data = [row for row in reader]
     return np.asarray(data)
@@ -181,6 +175,7 @@ num_cells = lattice_csv.shape[0]
 if num_cells != lattice_csv.shape[1]:
     raise Exception("CSV array of cell names is not square.")
 
+
 fuel_xs = xs_dict["fuel"]
 sig_f = np.array(fuel_xs.sigma_f)
 
@@ -194,30 +189,10 @@ offset_y =  4.705 - 16*pitch
 
 val_table = np.zeros([num_cells, num_cells])
 
+
 for i in range(num_cells):
     for j in range(num_cells):
-        if lattice_csv[i, j] == "fuh":
-            fuel_xs = xs_dict["high_fuel"]
-            sig_f = np.array(fuel_xs.sigma_f)
-            x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
-            if rank == 0:
-                print("centers=", i, j, x_center, y_center)
-            my_lv = RCCLogicalVolume(r=0.4060, x0=x_center, y0=y_center, z0=-1.0, vz=2.0)
-
-            val = 0
-            for g in range(0, num_groups):
-                ffi = FieldFunctionInterpolationVolume()
-                ffi.SetOperationType("sum")
-                ffi.SetLogicalVolume(my_lv)
-                ffi.AddFieldFunction(fflist[g])
-                ffi.Initialize()
-                ffi.Execute()
-                val_g = ffi.GetValue()
-                val += val_g * sig_f[g]
-            val_table[i, j] = val
-        if lattice_csv[i, j] == "ful":
-            fuel_xs = xs_dict["low_fuel"]
-            sig_f = np.array(fuel_xs.sigma_f)
+        if lattice_csv[i, j] == "fu":
             x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
             if rank == 0:
                 print("centers=", i, j, x_center, y_center)
@@ -248,7 +223,7 @@ B = np.hstack([A,A_flipped[:,1:]])
 B_flipped = np.flip(B, axis=0)
 val_table = np.vstack([B,B_flipped[1:,:]])
 
-norm = np.sum(val_table) / (cell_frequencies["fuh"] + cell_frequencies["ful"])
+norm = np.sum(val_table) / cell_frequencies["fu"]
 val_table /= norm
 
 MPIBarrier()
