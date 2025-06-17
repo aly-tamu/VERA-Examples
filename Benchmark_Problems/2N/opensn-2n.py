@@ -205,6 +205,8 @@ val_table = np.zeros([num_cells, num_cells])
 for i in range(num_cells):
     for j in range(num_cells):
         if lattice_csv[i, j] == "fu":
+            fuel_xs = xs_dict["normal_fuel"]
+            sig_f = np.array(fuel_xs.sigma_f)
             x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
             if rank == 0:
                 print("centers=", i, j, x_center, y_center)
@@ -221,7 +223,25 @@ for i in range(num_cells):
                 val_g = ffi.GetValue()
                 val += val_g * sig_f[g]
             val_table[i, j] = val
+        elif lattice_csv[i, j] == "c":
+            fuel_xs = xs_dict["coated_fuel"]
+            sig_f = np.array(fuel_xs.sigma_f)
+            x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
+            if rank == 0:
+                print("centers=", i, j, x_center, y_center)
+            my_lv = RCCLogicalVolume(r=0.4060, x0=x_center, y0=y_center, z0=-1.0, vz=2.0)
 
+            val = 0
+            for g in range(0, num_groups):
+                ffi = FieldFunctionInterpolationVolume()
+                ffi.SetOperationType("sum")
+                ffi.SetLogicalVolume(my_lv)
+                ffi.AddFieldFunction(fflist[g])
+                ffi.Initialize()
+                ffi.Execute()
+                val_g = ffi.GetValue()
+                val += val_g * sig_f[g]
+            val_table[i, j] = val
 val_table_ori = val_table.copy()
 
 val_table = np.flip(val_table, axis=1)

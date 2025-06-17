@@ -177,8 +177,6 @@ num_cells = lattice_csv.shape[0]
 if num_cells != lattice_csv.shape[1]:
     raise Exception("CSV array of cell names is not square.")
 
-fuel_xs = xs_dict["fuel"]
-sig_f = np.array(fuel_xs.sigma_f)
 
 pitch = 1.26
 
@@ -193,6 +191,28 @@ val_table = np.zeros([num_cells, num_cells])
 for i in range(num_cells):
     for j in range(num_cells):
         if lattice_csv[i, j] == "fu":
+            fuel_xs = xs_dict["normal_fuel"]
+            sig_f = np.array(fuel_xs.sigma_f)
+            x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
+            if rank == 0:
+                print("centers=", i, j, x_center, y_center)
+            my_lv = RCCLogicalVolume(r=0.4060, x0=x_center, y0=y_center, z0=-1.0, vz=2.0)
+
+            val = 0
+            for g in range(0, num_groups):
+                ffi = FieldFunctionInterpolationVolume()
+                ffi.SetOperationType("sum")
+                ffi.SetLogicalVolume(my_lv)
+                ffi.AddFieldFunction(fflist[g])
+                ffi.Initialize()
+                ffi.Execute()
+                val_g = ffi.GetValue()
+                val += val_g * sig_f[g]
+            val_table[i, j] = val
+        
+        if lattice_csv[i, j] == "gd":
+            fuel_xs = xs_dict["gd_fuel"]
+            sig_f = np.array(fuel_xs.sigma_f)
             x_center, y_center = compute_cell_center(i, j, offset_x, offset_y)
             if rank == 0:
                 print("centers=", i, j, x_center, y_center)
@@ -223,7 +243,7 @@ B = np.hstack([A,A_flipped[:,1:]])
 B_flipped = np.flip(B, axis=0)
 val_table = np.vstack([B,B_flipped[1:,:]])
 
-norm = np.sum(val_table) / cell_frequencies["fu"]
+norm = np.sum(val_table) / (cell_frequencies["fu"]+cell_frequencies["gd"])
 val_table /= norm
 
 MPIBarrier()
