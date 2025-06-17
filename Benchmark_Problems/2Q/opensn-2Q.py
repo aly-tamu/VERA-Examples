@@ -217,7 +217,7 @@ B = np.hstack([A,A_flipped[:,1:]])
 B_flipped = np.flip(B, axis=0)
 val_table = np.vstack([B,B_flipped[1:,:]])
 
-norm = np.sum(val_table) / ( cell_frequencies["fu"] + cell_frequencies["c"] )
+norm = np.sum(val_table) /cell_frequencies["fu"] 
 val_table /= norm
 
 MPIBarrier()

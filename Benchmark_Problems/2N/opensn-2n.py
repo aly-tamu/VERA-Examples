@@ -189,8 +189,6 @@ num_cells = lattice_csv.shape[0]
 if num_cells != lattice_csv.shape[1]:
     raise Exception("CSV array of cell names is not square.")
 
-fuel_xs = xs_dict["fuel"]
-sig_f = np.array(fuel_xs.sigma_f)
 
 pitch = 1.26
 
